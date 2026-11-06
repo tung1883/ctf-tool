@@ -1,0 +1,1990 @@
+{
+  "default": {
+    "site": {
+      "title": "CTF Competition 2026",
+      "subtitle": "Hack. Learn. Conquer.",
+      "logo_icon": "flag",
+      "accent_color": "#00ff88"
+    },
+    "event": {
+      "name": "HackConquest 2026",
+      "date": "November 20–21, 2026",
+      "duration": "48 hours",
+      "location": "Online",
+      "organizer": "Security Club",
+      "flag_format": "FLAG{...}"
+    },
+    "hero": {
+      "headline": "Welcome to HackConquest 2026",
+      "description": "A beginner-friendly Capture The Flag competition. Solve challenges across web, crypto, forensics, and more. Prizes await the top teams.",
+      "cta_text": "Register Now",
+      "cta_url": "#register",
+      "lab_cta_text": "View Lab Challenges",
+      "show_lab_link": true
+    },
+    "stats": [
+      {
+        "label": "Challenges",
+        "value": "30+",
+        "icon": "layers"
+      },
+      {
+        "label": "Teams",
+        "value": "200+",
+        "icon": "users"
+      },
+      {
+        "label": "Prize Pool",
+        "value": "$2,000",
+        "icon": "award"
+      },
+      {
+        "label": "Hours",
+        "value": "48",
+        "icon": "clock"
+      }
+    ],
+    "categories": [
+      {
+        "icon": "globe",
+        "name": "Web",
+        "description": "SQL injection, XSS, auth bypass, SSRF and more."
+      },
+      {
+        "icon": "lock",
+        "name": "Crypto",
+        "description": "Classical ciphers, RSA, hashing, and modern cryptography."
+      },
+      {
+        "icon": "microscope",
+        "name": "Forensics",
+        "description": "File analysis, steganography, memory dumps, and packet captures."
+      },
+      {
+        "icon": "terminal",
+        "name": "Pwn",
+        "description": "Buffer overflows, format strings, and binary exploitation."
+      },
+      {
+        "icon": "eye",
+        "name": "OSINT",
+        "description": "Open-source intelligence gathering and reconnaissance."
+      },
+      {
+        "icon": "puzzle",
+        "name": "Misc",
+        "description": "Puzzles, scripting challenges, and surprise categories."
+      }
+    ],
+    "partners": [
+      {
+        "name": "CyberShield Inc.",
+        "logo_url": "",
+        "website": "#",
+        "tier": "gold"
+      },
+      {
+        "name": "NullByte Labs",
+        "logo_url": "",
+        "website": "#",
+        "tier": "gold"
+      },
+      {
+        "name": "SecureStack",
+        "logo_url": "",
+        "website": "#",
+        "tier": "silver"
+      },
+      {
+        "name": "Redteam Co.",
+        "logo_url": "",
+        "website": "#",
+        "tier": "silver"
+      },
+      {
+        "name": "0xAcademy",
+        "logo_url": "",
+        "website": "#",
+        "tier": "bronze"
+      },
+      {
+        "name": "BinaryForge",
+        "logo_url": "",
+        "website": "#",
+        "tier": "bronze"
+      }
+    ],
+    "schedule": [
+      {
+        "time": "Nov 20 – 10:00 UTC",
+        "event": "Competition opens, challenges released"
+      },
+      {
+        "time": "Nov 20 – 12:00 UTC",
+        "event": "Opening ceremony livestream"
+      },
+      {
+        "time": "Nov 21 – 10:00 UTC",
+        "event": "Competition closes, flags locked"
+      },
+      {
+        "time": "Nov 21 – 12:00 UTC",
+        "event": "Award ceremony and writeup stream"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Who can participate?",
+        "a": "Anyone! This is a beginner-friendly event. Solo players and teams of up to 4 are welcome."
+      },
+      {
+        "q": "Do I need prior experience?",
+        "a": "No. We provide hints and have easy challenges designed for newcomers."
+      },
+      {
+        "q": "How do I submit a flag?",
+        "a": "Paste the flag string (in FLAG{...} format) into the submission box on the challenge page."
+      },
+      {
+        "q": "Are there prizes?",
+        "a": "Yes — top 3 teams win cash prizes. All finishers receive a certificate."
+      }
+    ],
+    "lab": {
+      "title": "Lab Challenges",
+      "subtitle": "Behold, the mighty botnets!",
+      "description": "This year's CTF theme focuses on botnet development, challenging participants to explore how botnets are designed, built, and operated in a controlled environment. By understanding the inner workings of botnets, their communication mechanisms, and attack strategies, participants will gain valuable insights into how these threats function in the real world. The ultimate goal is to bridge offensive and defensive security knowledge, equipping defenders with the skills and understanding needed to better detect, analyze, mitigate, and defend against botnet threats.",
+      "questions": [
+        {
+          "number": 1,
+          "title": "Botnet Challenge",
+          "description": "Participants are challenged to develop and deploy a botnet inspired by existing botnets such as Mirai or Satori. The botnet should demonstrate key characteristics of real-world botnet architectures, including command-and-control (C2) communication, device management, and coordinated operations.\n\nParticipants may use publicly disclosed CVEs to demonstrate how vulnerable systems can be compromised within the designated CTF environment. The objective is to understand how botnets are constructed and operate, providing defensive teams with a realistic adversarial scenario to investigate and defend against.\n\nOnce development is complete, the submitted botnet will be examined by the referees and defensive teams, who will evaluate its behavior, architecture, and security implications.",
+          "points": 300,
+          "hint": ""
+        }
+      ],
+      "rules": {
+        "allowed": [
+          "Use any tools installed on the provided lab machine",
+          "Search online for general techniques and documentation",
+          "Collaborate with your registered team members",
+          "Use notes, cheat sheets, and offline references",
+          "Restart the lab environment if it becomes unresponsive"
+        ],
+        "not_allowed": [
+          "Do not reach outside target",
+          "Share flags or complete solutions with other teams",
+          "Attempt to access or modify other teams' lab instances"
+        ]
+      }
+    },
+    "footer": {
+      "socials": [
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/hackconquest"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://twitter.com/hackconquest"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://facebook.com/hackconquest"
+        }
+      ],
+      "email": "ctf@hackconquest.com",
+      "copyright": "HackConquest 2026"
+    }
+  },
+  "binanalyst": {
+    "site": {
+      "title": "Binary Threat Analysis — Active Incident",
+      "subtitle": "Classify. Decompile. Report.",
+      "logo_icon": "shield",
+      "accent_color": "#f43f5e"
+    },
+    "event": {
+      "name": "Incident: Unknown Binary",
+      "date": "Ongoing — time-sensitive",
+      "duration": "Open",
+      "location": "Internal Lab Environment",
+      "organizer": "Security Operations",
+      "flag_format": "IOC{...}"
+    },
+    "hero": {
+      "headline": "Unknown Binary. Zero Signatures. Find the Threat.",
+      "description": "An unrecognized binary was recovered from an internal server. Code-signing checks, AV engines, and known-hash databases all returned clean. Threat intelligence suggests APT involvement. You are the analyst on call. Decompile it. Map the logic. Identify the vulnerability.",
+      "cta_text": "Access Lab Environment",
+      "cta_url": "#register",
+      "lab_cta_text": "View Mission Objectives",
+      "show_lab_link": true
+    },
+    "stats": [
+      {
+        "label": "Binaries",
+        "value": "3",
+        "icon": "layers"
+      },
+      {
+        "label": "Objectives",
+        "value": "5",
+        "icon": "book"
+      },
+      {
+        "label": "Severity",
+        "value": "CRITICAL",
+        "icon": "shield"
+      },
+      {
+        "label": "Time Limit",
+        "value": "6 hrs",
+        "icon": "clock"
+      }
+    ],
+    "categories": [
+      {
+        "icon": "microscope",
+        "name": "Triage",
+        "description": "Identify file format, architecture, compiler artifacts, and packer signatures before deeper analysis."
+      },
+      {
+        "icon": "puzzle",
+        "name": "Deobfuscation",
+        "description": "Strip packing layers, decode encrypted strings, and reconstruct the original code flow."
+      },
+      {
+        "icon": "layers",
+        "name": "Code Mapping",
+        "description": "Reconstruct function boundaries, call graphs, and data structures from raw disassembly."
+      },
+      {
+        "icon": "eye",
+        "name": "Behavioral Analysis",
+        "description": "Run the binary in a controlled sandbox and trace API calls, file I/O, registry changes, and network activity."
+      },
+      {
+        "icon": "globe",
+        "name": "C2 Analysis",
+        "description": "Identify command-and-control channels, decode beaconing protocols, and extract remote endpoints."
+      },
+      {
+        "icon": "terminal",
+        "name": "Vuln Identification",
+        "description": "Locate the specific code path — backdoor, exploit primitive, or logic flaw — that an attacker leverages."
+      }
+    ],
+    "partners": [],
+    "schedule": [
+      {
+        "time": "Phase 1",
+        "event": "Triage and initial fingerprinting of recovered binary"
+      },
+      {
+        "time": "Phase 2",
+        "event": "Static analysis — full code reconstruction"
+      },
+      {
+        "time": "Phase 3",
+        "event": "Dynamic analysis — controlled sandbox execution"
+      },
+      {
+        "time": "Phase 4",
+        "event": "Vulnerability identification and exploitation path mapping"
+      },
+      {
+        "time": "Phase 5",
+        "event": "IOC extraction and incident report submission"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Why did standard detection fail?",
+        "a": "The binary uses a custom packer, stripped symbols, and no network signatures. It was compiled specifically to evade signature-based detection. Manual analysis is the only reliable path."
+      },
+      {
+        "q": "Is it safe to run the binary?",
+        "a": "Only inside the isolated lab VM with no network access. The binary has active network callbacks. Running it on a live system risks lateral movement."
+      },
+      {
+        "q": "What is the IOC flag format?",
+        "a": "Each objective reveals an Indicator of Compromise wrapped in IOC{...}. These are real artifacts extracted from the binary — C2 addresses, hardcoded keys, function hashes."
+      },
+      {
+        "q": "What tools are available in the lab?",
+        "a": "The lab VM includes Ghidra, Binary Ninja, x64dbg, Wireshark, Process Monitor, FLOSS, Cutter, and a Python 3 environment with pwntools and capstone."
+      }
+    ],
+    "lab": {
+      "title": "Mission Objectives",
+      "subtitle": "CLASSIFICATION: INTERNAL — Security Operations Use Only",
+      "description": "An unrecognized 64-bit PE binary (SHA-256: redacted) was recovered from C:\\ProgramData\\Microsoft\\svchost32.exe on a finance workstation. It has been present for an estimated 14 days. No AV vendor currently detects it. Work through each objective in order. Do not execute the binary outside the provided sandbox VM. Submit each IOC flag as you find it.",
+      "questions": [
+        {
+          "number": 1,
+          "title": "Triage & Fingerprinting",
+          "description": "Load the binary in a static analysis tool. Identify: (1) the target architecture and OS, (2) the compiler and approximate build date from PE header artifacts, (3) whether a packer or protector is present and which one. Submit the packer identification string as the flag.",
+          "points": 100,
+          "hint": "Run FLOSS and Detect-It-Easy against the binary before opening it in a disassembler. Check the PE section names and entropy values — high entropy sections indicate packing."
+        },
+        {
+          "number": 2,
+          "title": "Unpack & Reconstruct Entry Point",
+          "description": "The binary is packed. Attach a debugger, let the unpacking stub execute until it reaches the original entry point (OEP), then dump the unpacked image. Load the dump into Ghidra and auto-analyze. Identify the first meaningful function called after entry — not a CRT or loader stub. Submit its virtual address as the flag.",
+          "points": 200,
+          "hint": "Look for a jump to a region that was written at runtime. Set a hardware write breakpoint on the destination memory range, let it fire, then follow the final JMP to OEP."
+        },
+        {
+          "number": 3,
+          "title": "Persistence Mechanism",
+          "description": "The binary installs a persistence mechanism on first run. Using behavioral analysis (Process Monitor + sandbox trace), identify exactly how it achieves persistence: the registry key path, scheduled task name, or service entry it creates. Submit the persistence artifact name as the flag.",
+          "points": 250,
+          "hint": "Filter Process Monitor for RegSetValue and CreateFile operations during the first 10 seconds of execution inside the sandbox VM."
+        },
+        {
+          "number": 4,
+          "title": "C2 Communication Protocol",
+          "description": "The binary beacons to a remote server. The destination is not hardcoded as a plain string — it is derived algorithmically at runtime. Reverse the domain generation algorithm (DGA) or decode the encrypted endpoint. Submit the decoded C2 address as the flag.",
+          "points": 350,
+          "hint": "Look for base64 or XOR decoding routines near the networking calls (WSAConnect, InternetConnect, or WinHTTP functions). Emulate the decoding function in Python to recover the plaintext."
+        },
+        {
+          "number": 5,
+          "title": "Vulnerability — The Backdoor",
+          "description": "The binary contains a backdoor that allows the attacker to execute arbitrary commands on the host with SYSTEM privileges. Identify the exact vulnerability class (e.g., command injection, deserialization, memory corruption), the function name or offset where it occurs, and the trigger condition. Submit the function offset and vulnerability class as the flag.",
+          "points": 500,
+          "hint": ""
+        }
+      ],
+      "rules": {
+        "allowed": [
+          "Run the binary exclusively inside the provided isolated sandbox VM",
+          "Use any static or dynamic analysis tool available in the lab environment",
+          "Capture and analyze all network traffic generated inside the sandbox",
+          "Modify or patch the binary in memory during dynamic analysis",
+          "Use Python or scripting to automate decoding routines"
+        ],
+        "not_allowed": [
+          "Execute the binary on any machine connected to a live network",
+          "Copy the binary outside the lab environment",
+          "Share IOC flags or analysis findings with participants outside your team",
+          "Submit findings to public threat intelligence platforms during the exercise",
+          "Attempt to connect to the actual C2 server if identified — document only"
+        ]
+      }
+    },
+    "footer": {
+      "socials": [
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/secops"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://twitter.com/secops"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/secops"
+        }
+      ],
+      "email": "secops@company.internal",
+      "copyright": "Security Operations — Internal Use Only"
+    }
+  },
+  "botnet": {
+    "site": {
+      "title": "BotnetCTF 2026 — Research & Defense",
+      "subtitle": "Understand botnets. Build better defenses.",
+      "logo_icon": "globe",
+      "accent_color": "#f97316"
+    },
+    "event": {
+      "name": "BotnetCTF 2026",
+      "date": "March 14–15, 2027",
+      "duration": "48 hours",
+      "location": "Isolated Lab Environment",
+      "organizer": "Security Club",
+      "flag_format": "BOT{...}"
+    },
+    "hero": {
+      "headline": "Build a Botnet. Understand the Threat. Defend Against It.",
+      "description": "This year's CTF theme focuses on botnet development, challenging participants to explore how botnets are designed, built, and operated in a controlled environment. By understanding the inner workings of botnets, their communication mechanisms, and attack strategies, participants will gain valuable insights into how these threats function in the real world. The ultimate goal is to bridge offensive and defensive security knowledge, equipping defenders with the skills and understanding needed to better detect, analyze, mitigate, and defend against botnet threats.",
+      "disclaimer": "FOR RESEARCH AND DEFENSIVE PURPOSES ONLY. All development and testing must remain strictly within the designated CTF lab environment. Any application of techniques, code, or knowledge from this competition outside the authorized environment is strictly prohibited and may constitute a criminal offense. By participating, you agree to these terms.",
+      "cta_text": "Register Now",
+      "cta_url": "#register",
+      "lab_cta_text": "View Lab Objectives",
+      "show_lab_link": true
+    },
+    "stats": [
+      {
+        "label": "Challenges",
+        "value": "5",
+        "icon": "layers"
+      },
+      {
+        "label": "Teams",
+        "value": "80+",
+        "icon": "users"
+      },
+      {
+        "label": "Prize Pool",
+        "value": "$1,500",
+        "icon": "award"
+      },
+      {
+        "label": "Hours",
+        "value": "48",
+        "icon": "clock"
+      }
+    ],
+    "categories": [
+      {
+        "icon": "globe",
+        "name": "C2 Architecture",
+        "description": "Design and implement a command-and-control server: protocols, authentication, and tasking queues."
+      },
+      {
+        "icon": "terminal",
+        "name": "Bot Client",
+        "description": "Develop the agent that runs on compromised nodes: beaconing, command execution, and self-management."
+      },
+      {
+        "icon": "layers",
+        "name": "Propagation",
+        "description": "Simulate how bots spread using disclosed CVEs against intentionally vulnerable lab targets."
+      },
+      {
+        "icon": "eye",
+        "name": "Coordinated Ops",
+        "description": "Demonstrate botnet-driven coordinated actions such as DDoS simulation in the sandbox environment."
+      },
+      {
+        "icon": "shield",
+        "name": "Evasion Techniques",
+        "description": "Understand how botnets evade detection: encrypted comms, domain fluxing, and traffic mimicry."
+      },
+      {
+        "icon": "microscope",
+        "name": "Defensive Analysis",
+        "description": "Analyze your own botnet from a defender's perspective: extract IOCs, write detection rules, and report."
+      }
+    ],
+    "partners": [],
+    "schedule": [
+      {
+        "time": "Mar 14 – 10:00 UTC",
+        "event": "Competition opens — lab VMs and CVE targets provisioned"
+      },
+      {
+        "time": "Mar 14 – 12:00 UTC",
+        "event": "Opening stream — architecture overview and rules briefing"
+      },
+      {
+        "time": "Mar 15 – 06:00 UTC",
+        "event": "Submission deadline for botnet implementation"
+      },
+      {
+        "time": "Mar 15 – 08:00 UTC",
+        "event": "Referee and defensive team evaluation begins"
+      },
+      {
+        "time": "Mar 15 – 12:00 UTC",
+        "event": "Award ceremony — findings presented to defensive teams"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is this legal?",
+        "a": "All activity takes place inside a fully isolated lab environment with no connection to the public internet. Participants operate exclusively on systems they are explicitly authorized to interact with. Applying any technique outside this environment is prohibited."
+      },
+      {
+        "q": "What is the purpose of building a botnet here?",
+        "a": "Understanding offensive techniques in depth is one of the most effective paths to building strong defenses. Defensive teams will analyze every submission to extract detection logic, IOCs, and behavioral signatures they can use in real-world environments."
+      },
+      {
+        "q": "What reference botnets can I study?",
+        "a": "Participants may study publicly documented botnets such as Mirai and Satori using published research papers, academic write-ups, and disclosed CVE analyses. Direct use of leaked source code is not permitted."
+      },
+      {
+        "q": "How are submissions judged?",
+        "a": "Referees and defensive teams evaluate each botnet on architecture quality, real-world fidelity, documentation, and the value of defensive insights it provides. Points are awarded for both offensive completeness and the quality of your own defensive write-up."
+      },
+      {
+        "q": "What happens to submitted code after the event?",
+        "a": "All code remains within the competition environment and is never distributed publicly. It is used solely for defensive research by the organizing team."
+      }
+    ],
+    "lab": {
+      "title": "Lab Objectives",
+      "subtitle": "Isolated lab environment — no external network access",
+      "description": "Participants are challenged to develop and deploy a botnet inspired by existing botnets such as Mirai or Satori. The botnet should demonstrate key characteristics of real-world botnet architectures, including command-and-control (C2) communication, device management, and coordinated operations. Participants may use publicly disclosed CVEs to demonstrate how vulnerable systems can be compromised within the designated CTF environment. The objective is to understand how botnets are constructed and operate, providing defensive teams with a realistic adversarial scenario to investigate and defend against. Once development is complete, the submitted botnet will be examined by the referees and defensive teams, who will evaluate its behavior, architecture, and security implications.",
+      "disclaimer": "AUTHORIZED ENVIRONMENT ONLY. All botnet code, C2 infrastructure, and exploitation techniques must operate exclusively within the provided lab subnet (192.168.100.0/24). Any attempt to reach external networks, real infrastructure, or systems outside the lab range will result in immediate disqualification and may be referred to law enforcement. This environment is monitored at all times.",
+      "questions": [
+        {
+          "number": 1,
+          "title": "C2 Server Implementation",
+          "description": "Design and implement a command-and-control server within the lab environment. It must support: (1) authenticated bot registration, (2) a tasking queue for distributing commands to connected bots, (3) status reporting from bots, and (4) an operator interface. Submit the C2 protocol specification as the flag.",
+          "points": 200,
+          "hint": "Start with a simple TCP or HTTP-based protocol. Document every message type clearly — the defensive team will need to build detectors from your spec."
+        },
+        {
+          "number": 2,
+          "title": "Bot Client — Beacon & Execute",
+          "description": "Develop the bot agent that runs on compromised lab nodes. It must: beacon to the C2 server on a configurable interval, receive and execute commands, report results back, and maintain persistence across reboots on the lab target. Submit the beacon interval and persistence mechanism as the flag.",
+          "points": 250,
+          "hint": "Keep the beacon protocol simple but document it thoroughly. Persistence options include cron jobs, systemd units, or rc.local — all valid within the lab."
+        },
+        {
+          "number": 3,
+          "title": "Propagation via Disclosed CVE",
+          "description": "Using a publicly disclosed CVE assigned to one of the intentionally vulnerable lab targets (see the lab CVE list), demonstrate how your bot could compromise a new host and add it to the botnet. The vulnerable targets are listed in /lab/targets.txt on the lab VM. Submit the CVE number and your exploitation approach as the flag.",
+          "points": 300,
+          "hint": "Review the CVSS score and published PoC for each listed CVE. Choose one with a network-accessible attack vector. Use Metasploit or a custom exploit — both are permitted on the lab targets."
+        },
+        {
+          "number": 4,
+          "title": "Coordinated Operation",
+          "description": "Using your C2 and at least 3 compromised lab nodes, demonstrate a coordinated operation: a synchronized DDoS simulation against the lab's designated target server (192.168.100.254). The target server measures and logs incoming request volume. Submit the peak requests-per-second achieved as the flag.",
+          "points": 300,
+          "hint": "Coordinate timing via your C2's tasking queue. HTTP flood is the simplest approach. The target server accepts connections on port 80 and logs all requests to /var/log/ddos-sim.log."
+        },
+        {
+          "number": 5,
+          "title": "Defensive Write-Up — IOCs & Detection Rules",
+          "description": "Analyze your own botnet from a defender's perspective and produce a defensive report covering: (1) a full list of IOCs (IPs, domains, file hashes, registry keys, process names), (2) at least 3 Sigma or Snort/Suricata detection rules targeting your botnet's behavior, and (3) recommended mitigations. The quality of this report is worth as many points as the technical challenges combined. Submit your report to the referee portal to receive the flag.",
+          "points": 500,
+          "hint": "Think like a SOC analyst who has never seen your botnet before. What would they see in firewall logs, process monitors, and network captures? Write rules that catch your own traffic."
+        }
+      ],
+      "rules": {
+        "allowed": [
+          "Develop and deploy botnet code exclusively within the lab subnet (192.168.100.0/24)",
+          "Use publicly disclosed CVEs to compromise designated, intentionally vulnerable lab targets",
+          "Reference published research papers and academic analyses of real botnets",
+          "Use any tool available on the lab VM (Metasploit, Scapy, nmap, etc.)",
+          "Collaborate with your registered team members within your team's isolated lab segment"
+        ],
+        "not_allowed": [
+          "Deploy any botnet code, C2, or exploit outside the lab environment — this includes your own machines",
+          "Target any host outside the designated lab subnet (192.168.100.0/24)",
+          "Use leaked or non-publicly-available botnet source code",
+          "Share code, exploits, or techniques with other teams during the competition",
+          "Attempt to reach the public internet from the lab environment",
+          "Distribute any competition code or tooling outside the authorized environment after the event"
+        ]
+      }
+    },
+    "footer": {
+      "socials": [
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/botnetctf"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://twitter.com/botnetctf"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/botnetctf"
+        }
+      ],
+      "email": "ctf@botnetctf.io",
+      "copyright": "BotnetCTF 2026 — Research & Defensive Security"
+    }
+  },
+  "crackingday": {
+    "site": {
+      "title": "CrackingDay 2026",
+      "subtitle": "Break. Patch. Own.",
+      "logo_icon": "lock",
+      "accent_color": "#ff9500"
+    },
+    "event": {
+      "name": "CrackingDay 2026",
+      "date": "December 7–8, 2026",
+      "duration": "36 hours",
+      "location": "Online",
+      "organizer": "Security Club",
+      "flag_format": "CRACK{...}"
+    },
+    "hero": {
+      "headline": "Break the Code. Own the License.",
+      "description": "A hands-on crackme competition using fully authorized software targets. Analyze protections, write patches, and build keygens — all legally, all in a sandboxed lab.",
+      "cta_text": "Register Now",
+      "cta_url": "#register",
+      "lab_cta_text": "View Lab Targets",
+      "show_lab_link": true
+    },
+    "stats": [
+      {
+        "label": "Crackmes",
+        "value": "20+",
+        "icon": "lock"
+      },
+      {
+        "label": "Teams",
+        "value": "150+",
+        "icon": "users"
+      },
+      {
+        "label": "Prize Pool",
+        "value": "$1,500",
+        "icon": "award"
+      },
+      {
+        "label": "Hours",
+        "value": "36",
+        "icon": "clock"
+      }
+    ],
+    "categories": [
+      {
+        "icon": "lock",
+        "name": "License Analysis",
+        "description": "Analyze license key validation algorithms and protection schemes."
+      },
+      {
+        "icon": "terminal",
+        "name": "Patch Writing",
+        "description": "Write minimal binary patches to bypass protection checks."
+      },
+      {
+        "icon": "layers",
+        "name": "Keygen",
+        "description": "Reverse the registration algorithm and implement a working keygen."
+      },
+      {
+        "icon": "eye",
+        "name": "Anti-Debug",
+        "description": "Bypass debugger detection, timing checks, and anti-tamper measures."
+      },
+      {
+        "icon": "puzzle",
+        "name": "Packer Bypass",
+        "description": "Unpack and reconstruct protected or compressed executables."
+      },
+      {
+        "icon": "microscope",
+        "name": "Serial Fishing",
+        "description": "Locate serial validation routines and extract correct serials."
+      }
+    ],
+    "partners": [],
+    "schedule": [
+      {
+        "time": "Dec 7 – 10:00 UTC",
+        "event": "Competition opens, crackme targets released"
+      },
+      {
+        "time": "Dec 7 – 12:00 UTC",
+        "event": "Opening stream — walkthrough of rules & tools"
+      },
+      {
+        "time": "Dec 8 – 10:00 UTC",
+        "event": "Submissions close"
+      },
+      {
+        "time": "Dec 8 – 12:00 UTC",
+        "event": "Award ceremony and solution writeups"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Are the software targets legal to crack?",
+        "a": "Yes. Every target is purpose-built crackme software or software provided explicitly for this event under license. Cracking real commercial software is not part of this competition."
+      },
+      {
+        "q": "What tools are allowed?",
+        "a": "Any tool is allowed: IDA Pro, Ghidra, x64dbg, Cheat Engine, Binary Ninja, etc. The lab machine has a standard toolkit pre-installed."
+      },
+      {
+        "q": "What is the flag format?",
+        "a": "Flags are in CRACK{...} format. Each crackme reveals the flag when successfully cracked or patched."
+      },
+      {
+        "q": "Can I share my patches after the event?",
+        "a": "Yes — after the event ends, writeups and patches are encouraged to be shared publicly for learning purposes."
+      }
+    ],
+    "lab": {
+      "title": "Lab Targets",
+      "subtitle": "Authorized crackme binaries",
+      "description": "All targets below are purpose-built or explicitly licensed for this competition. Do not attempt to crack software outside this list. Flags are in CRACK{...} format.",
+      "questions": [
+        {
+          "number": 1,
+          "title": "SimpleSerial.exe",
+          "description": "A Windows x86 application protected by a simple serial number check. Enter the correct serial to reveal the flag. No obfuscation.",
+          "points": 100,
+          "hint": "Set a breakpoint on common string comparison functions. Look for the comparison between your input and the expected value."
+        },
+        {
+          "number": 2,
+          "title": "PatchMe.exe",
+          "description": "The application shows 'License Expired' on launch. Patch the binary so it always passes the license date check.",
+          "points": 200,
+          "hint": "Find the conditional jump after the date comparison and change its direction."
+        },
+        {
+          "number": 3,
+          "title": "KeygenMe.exe",
+          "description": "Reverse the registration algorithm and write a keygen that produces a valid serial for any given username. Submit a valid serial for the username 'CrackingDay2026'.",
+          "points": 400,
+          "hint": ""
+        }
+      ],
+      "rules": {
+        "allowed": [
+          "Use any reverse engineering tool (Ghidra, IDA, x64dbg, Binary Ninja, etc.)",
+          "Patch binaries using hex editors or patching tools",
+          "Use dynamic analysis — debuggers, tracers, API monitors",
+          "Search online for general techniques and documentation",
+          "Collaborate with registered team members"
+        ],
+        "not_allowed": [
+          "Crack or tamper with software outside the provided target list",
+          "Share flags, patches, or keygens with other teams during the event",
+          "Distribute cracked versions of any software publicly",
+          "Attempt to attack competition infrastructure"
+        ]
+      }
+    },
+    "footer": {
+      "socials": [
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/crackingday"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://twitter.com/crackingday"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://facebook.com/crackingday"
+        }
+      ],
+      "email": "ctf@crackingday.com",
+      "copyright": "CrackingDay 2026"
+    }
+  },
+  "datascraping": {
+    "site": {
+      "title": "ScrapeCTF 2026",
+      "subtitle": "Extract everything. Leave no data behind.",
+      "logo_icon": "globe",
+      "accent_color": "#38bdf8"
+    },
+    "event": {
+      "name": "ScrapeCTF 2026",
+      "date": "July 12–13, 2027",
+      "duration": "36 hours",
+      "location": "Online",
+      "organizer": "Security Club",
+      "flag_format": "SCRAPE{...}"
+    },
+    "hero": {
+      "headline": "The Data Is There. Go Get It.",
+      "description": "ScrapeCTF is a web data extraction competition covering the full scraping stack: HTTP client engineering, HTML/JSON parsing, JavaScript-rendered SPA scraping, anti-bot bypass, API reverse engineering, and large-scale data pipeline assembly. All targets are purpose-built challenge servers — no real websites, no ToS violations, no grey areas. If it's on the challenge server, you're authorized to scrape it.",
+      "cta_text": "Register Now",
+      "cta_url": "#register",
+      "lab_cta_text": "View Challenges",
+      "show_lab_link": true
+    },
+    "stats": [
+      {
+        "label": "Challenges",
+        "value": "8",
+        "icon": "layers"
+      },
+      {
+        "label": "Teams",
+        "value": "150+",
+        "icon": "users"
+      },
+      {
+        "label": "Prize Pool",
+        "value": "$1,200",
+        "icon": "award"
+      },
+      {
+        "label": "Hours",
+        "value": "36",
+        "icon": "clock"
+      }
+    ],
+    "categories": [
+      {
+        "icon": "globe",
+        "name": "HTTP & Headers",
+        "description": "Session management, cookie handling, custom headers, redirect chains, and authentication flows."
+      },
+      {
+        "icon": "terminal",
+        "name": "HTML Parsing",
+        "description": "DOM traversal, XPath, CSS selectors, deeply nested structures, and malformed markup."
+      },
+      {
+        "icon": "eye",
+        "name": "JavaScript / SPA",
+        "description": "Scraping React, Vue, and Angular apps that render entirely in the browser — Playwright and Puppeteer territory."
+      },
+      {
+        "icon": "lock",
+        "name": "Anti-Bot Bypass",
+        "description": "Rate limiting, IP rotation, CAPTCHA challenges, Cloudflare-style fingerprinting, and behavioral detection."
+      },
+      {
+        "icon": "puzzle",
+        "name": "API Reverse Engineering",
+        "description": "Undocumented REST and GraphQL APIs: sniff traffic, decode obfuscated parameters, replay and automate requests."
+      },
+      {
+        "icon": "layers",
+        "name": "Data Pipeline",
+        "description": "Extract → clean → transform → store. Structured output from messy sources, deduplication, and schema inference."
+      }
+    ],
+    "partners": [],
+    "schedule": [
+      {
+        "time": "Jul 12 – 10:00 UTC",
+        "event": "Competition opens — all challenge servers live"
+      },
+      {
+        "time": "Jul 12 – 12:00 UTC",
+        "event": "Opening stream — tooling overview (httpx, Playwright, scrapy, parsel)"
+      },
+      {
+        "time": "Jul 12 – 20:00 UTC",
+        "event": "First-blood announcements"
+      },
+      {
+        "time": "Jul 13 – 10:00 UTC",
+        "event": "Final submissions close"
+      },
+      {
+        "time": "Jul 13 – 12:00 UTC",
+        "event": "Award ceremony and writeup stream"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Are we scraping real websites?",
+        "a": "No. All targets are purpose-built challenge servers hosted for this event. You are explicitly authorized to scrape them by any means necessary. No real websites, no ToS issues, no legal grey areas."
+      },
+      {
+        "q": "What language should I use?",
+        "a": "Any language. Python (httpx, requests, scrapy, Playwright, Selenium, parsel, BeautifulSoup) is the most common, but Node.js (Puppeteer, Cheerio), Go, and Rust scrapers are all valid."
+      },
+      {
+        "q": "How are flags submitted?",
+        "a": "Each challenge defines a flag extraction objective — scrape a specific data point from the target server and submit it in SCRAPE{...} format. The flag value is embedded in the data you extract."
+      },
+      {
+        "q": "Are there browser automation challenges?",
+        "a": "Yes — two challenges require a real browser (Playwright or Puppeteer) because the targets render entirely in JavaScript. Headless browser automation is part of the skill set being tested."
+      },
+      {
+        "q": "Can I use proxy pools or IP rotation?",
+        "a": "Yes. For anti-bot bypass challenges, rotating proxies and user-agent spoofing are explicitly permitted and expected. The lab provides a small proxy list for teams without their own."
+      }
+    ],
+    "lab": {
+      "title": "Scraping Challenges",
+      "subtitle": "All targets are live on the challenge server — start scraping",
+      "description": "Eight challenges in increasing difficulty. Each challenge defines a target URL and the data you need to extract. Flags are embedded in the extracted data. Static targets stay up for the full 36 hours; dynamic targets (rate-limited, bot-protected) reset every 6 hours.",
+      "questions": [
+        {
+          "number": 1,
+          "title": "Static HTML — Product Catalog",
+          "description": "The target server hosts a paginated product catalog across 50 pages of static HTML. Scrape all product names, SKUs, and prices. The flag is the SHA-256 hash of all SKUs sorted alphabetically and joined with newlines. Pagination uses standard ?page=N query params.",
+          "points": 100,
+          "hint": "Use requests + BeautifulSoup or httpx + parsel. Find the pagination range from the first page's nav element. Pool your requests with asyncio or a thread pool for speed."
+        },
+        {
+          "number": 2,
+          "title": "Authentication & Session Cookies",
+          "description": "The target has a login wall. Credentials are posted in the challenge description. After login, scrape the user dashboard which contains a hidden data table not visible to logged-out visitors. The flag is in a table cell with class 'secret-value'.",
+          "points": 150,
+          "hint": "Use a requests.Session() to persist cookies across the login POST and subsequent GETs. Check the login form for CSRF tokens — they need to be submitted with the credentials."
+        },
+        {
+          "number": 3,
+          "title": "JavaScript-Rendered SPA",
+          "description": "The target is a React single-page application. The HTML returned by the server is an empty shell — all content is loaded via API calls after the JS executes. Scrape the full article list from the rendered DOM. The flag is embedded in the last article's body text.",
+          "points": 200,
+          "hint": "Use Playwright: `page.goto(url)` then `page.wait_for_selector('.article-list')` before extracting. Alternatively, open DevTools Network tab on the target manually to find the underlying API call and hit it directly."
+        },
+        {
+          "number": 4,
+          "title": "Undocumented REST API",
+          "description": "A mobile app's backend API is running on the challenge server. No documentation exists. Intercept the app's traffic (a web simulation is provided), reverse engineer the authentication scheme (HMAC-signed requests), and extract the full user list from the /api/users endpoint. The flag is the email address of user ID 1337.",
+          "points": 250,
+          "hint": "Open the web simulation in DevTools and watch the Network tab. Look for Authorization headers on API requests — they usually follow a pattern like HMAC-SHA256(timestamp + path + body, secret_key). Find the secret key in the JS source."
+        },
+        {
+          "number": 5,
+          "title": "Rate-Limited Endpoint",
+          "description": "The target endpoint returns one record per request and allows a maximum of 10 requests per minute per IP. You need to collect 500 records. Implement a compliant scraper that respects the rate limit and collects all records within the competition window. The flag is embedded in record #499.",
+          "points": 200,
+          "hint": "Use a token bucket or simple sleep-based rate limiter. 500 records at 10/min = 50 minutes — well within the window. Store results to disk as you go in case of crashes."
+        },
+        {
+          "number": 6,
+          "title": "Anti-Bot: Fingerprinting & Behavioral Detection",
+          "description": "The target runs a Cloudflare-style JS challenge and behavioral analysis — it blocks headless browsers detected by missing browser properties, unusual TLS fingerprints, or non-human interaction timing. Bypass the detection and scrape the protected data table. The flag is in the 7th row.",
+          "points": 350,
+          "hint": "Use Playwright with stealth patches (playwright-stealth or puppeteer-extra-plugin-stealth). Randomize mouse movements and scroll before clicking. Check if the TLS fingerprint (JA3) is being filtered — use a residential proxy if so."
+        },
+        {
+          "number": 7,
+          "title": "GraphQL Introspection & Data Extraction",
+          "description": "The target exposes a GraphQL API with introspection enabled. Enumerate the full schema, identify the query that returns flagged data, and extract it. The API uses cursor-based pagination — scrape all pages. The flag is in the notes field of the last node.",
+          "points": 300,
+          "hint": "Run a full introspection query first: `{ __schema { types { name fields { name } } } }`. Use a tool like GraphQL Voyager or Altair to visualize the schema. Then write a paginated query using the `after` cursor field."
+        },
+        {
+          "number": 8,
+          "title": "Full Pipeline — Scrape, Clean, Aggregate",
+          "description": "Three separate target servers each host one piece of a dataset: product catalog, inventory levels, and pricing history. Scrape all three, join them on a shared product_id field, clean the data (normalize dates, deduplicate entries, fill missing values), and compute the total inventory value across all products. Submit the total as the flag.",
+          "points": 400,
+          "hint": "Tackle each source separately first. Use pandas for the join and aggregation. Watch for inconsistent product_id formats between sources (some use int, some use zero-padded strings) — normalize before joining."
+        }
+      ],
+      "rules": {
+        "allowed": [
+          "Any HTTP client library, headless browser, or scraping framework",
+          "Proxy rotation, user-agent spoofing, and anti-bot bypass techniques on challenge targets",
+          "Automated scripts, concurrent requests, and pipeline tooling",
+          "Inspecting challenge server traffic with DevTools or a proxy (Burp, mitmproxy, Charles)",
+          "Collaborating with your registered team members"
+        ],
+        "not_allowed": [
+          "Scraping any server outside the designated challenge infrastructure",
+          "Attempting to attack or crash the challenge servers (DoS, SQL injection, etc.) — these are scraping challenges, not web security challenges",
+          "Sharing flags or working scrapers with other teams during the competition",
+          "Attempting to access other teams' submitted data or scraper code"
+        ]
+      }
+    },
+    "footer": {
+      "socials": [
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/scrapectf"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://twitter.com/scrapectf"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/scrapectf"
+        }
+      ],
+      "email": "ctf@scrapectf.io",
+      "copyright": "ScrapeCTF 2026"
+    }
+  },
+  "gamecheatday": {
+    "site": {
+      "title": "CTF GameCheatDay 2026",
+      "subtitle": "Scan. Inject. GG.",
+      "logo_icon": "terminal",
+      "accent_color": "#22d3ee"
+    },
+    "event": {
+      "name": "CTF GameCheatDay 2026",
+      "date": "February 14–15, 2027",
+      "duration": "36 hours",
+      "location": "Online",
+      "organizer": "Security Club",
+      "flag_format": "CHEAT{...}"
+    },
+    "hero": {
+      "headline": "Scan Memory. Hook Functions. Build the Cheat.",
+      "description": "A hands-on competition for building trainers, mods, and exploits on purpose-built game targets. No real online games, no bans — just sandboxed binaries, raw memory, and your tools.",
+      "cta_text": "Register Now",
+      "cta_url": "#register",
+      "lab_cta_text": "View Challenges",
+      "show_lab_link": true
+    },
+    "stats": [
+      {
+        "label": "Game Targets",
+        "value": "5",
+        "icon": "layers"
+      },
+      {
+        "label": "Teams",
+        "value": "120+",
+        "icon": "users"
+      },
+      {
+        "label": "Prize Pool",
+        "value": "$1,000",
+        "icon": "award"
+      },
+      {
+        "label": "Hours",
+        "value": "36",
+        "icon": "clock"
+      }
+    ],
+    "categories": [
+      {
+        "icon": "eye",
+        "name": "Memory Scanning",
+        "description": "Locate health, ammo, position, and other game state values in live process memory."
+      },
+      {
+        "icon": "terminal",
+        "name": "Pointer Research",
+        "description": "Build stable multi-level pointer chains that survive game restarts and level loads."
+      },
+      {
+        "icon": "puzzle",
+        "name": "Code Injection",
+        "description": "Write and inject DLLs into the game process. Hook functions and redirect execution."
+      },
+      {
+        "icon": "microscope",
+        "name": "Function Hooking",
+        "description": "Intercept game functions — damage, movement, rendering — to read, modify, or block them."
+      },
+      {
+        "icon": "globe",
+        "name": "Speedrun Exploits",
+        "description": "Find wrong warps, out-of-bounds skips, and logic bypasses to complete levels in record time."
+      },
+      {
+        "icon": "lock",
+        "name": "Mod Development",
+        "description": "Create gameplay modifications: new items, custom maps, altered game rules, and visual hacks."
+      }
+    ],
+    "partners": [],
+    "schedule": [
+      {
+        "time": "Feb 14 – 10:00 UTC",
+        "event": "Competition opens — game binaries and VM images released"
+      },
+      {
+        "time": "Feb 14 – 12:00 UTC",
+        "event": "Opening stream — tool walkthrough and warmup challenge"
+      },
+      {
+        "time": "Feb 14 – 20:00 UTC",
+        "event": "Midpoint leaderboard reveal"
+      },
+      {
+        "time": "Feb 15 – 10:00 UTC",
+        "event": "Submissions close — final flags locked"
+      },
+      {
+        "time": "Feb 15 – 12:00 UTC",
+        "event": "Award stream — top team demos and technique breakdowns"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Are these real commercial games?",
+        "a": "No. All targets are purpose-built game binaries or open-source games provided specifically for this event. Using cheats on real commercial games is strictly prohibited."
+      },
+      {
+        "q": "What tools do I need?",
+        "a": "Cheat Engine, x64dbg, ReClass.NET, and a C++ compiler for DLL injection. The lab VM has everything pre-installed. External tools are allowed as long as they run on the lab machine."
+      },
+      {
+        "q": "Do I need game development experience?",
+        "a": "No — but familiarity with memory concepts (pointers, offsets, heap vs stack) helps a lot. The warmup challenge is designed to get you started from scratch."
+      },
+      {
+        "q": "How are flags submitted?",
+        "a": "Each challenge reveals a flag in CHEAT{...} format when the objective is completed — for example, the target value is set to the flag string once your cheat activates correctly."
+      }
+    ],
+    "lab": {
+      "title": "Cheat Challenges",
+      "subtitle": "Sandboxed game targets",
+      "description": "Counter-Strike 2 desparately need to improve the VAC Anti-cheat system, hackers please try your best to develop mods to bypass it, so that the company can improve. All game binaries below run in this provided Windows machine. Do not run them outside of this CTF. Each challenge is self-contained and will be examined by the refrees later if the objective is met. Go deep down layers under the OS to avoid detection from the game's anti-cheat. Work through them in order — later challenges build on skills from earlier ones.",
+      "questions": [
+        {
+          "number": 1,
+          "title": "Skin Changer",
+          "description": "Write a program to allow players to change to any skins they want. Note: do not get caught by the anti-cheat system",
+          "points": 100,
+          "hint": ""
+        },
+        {
+          "number": 2,
+          "title": "Full-on Hack Mode",
+          "description": "Write a program to allow users to cheat with aimbot or wall seethrough. Note: do not get caught by the anti-cheat system",
+          "points": 400,
+          "hint": ""
+        }
+      ],
+      "rules": {
+        "allowed": [
+          "Use Cheat Engine, x64dbg, ReClass.NET, IDA, Ghidra, or any tool that runs in the lab VM",
+          "Write and inject DLLs into the provided game processes",
+          "Modify game memory, patch binaries, and hook functions at runtime",
+          "Reverse and modify game asset files (maps, configs, data files)",
+          "Use speedrun techniques including out-of-bounds and logic exploits on provided targets"
+        ],
+        "not_allowed": [
+          "Use any cheat or exploit in real commercial multiplayer games",
+          "Target any game binary not on the provided list",
+          "Share working cheat code or DLLs publicly during the competition",
+          "Distribute copyrighted game assets or binaries outside the lab VM",
+          "Attack competition infrastructure or other participants"
+        ]
+      }
+    },
+    "footer": {
+      "socials": [
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/gamecheatday"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://twitter.com/gamecheatday"
+        },
+        {
+          "label": "Twitch",
+          "url": "https://twitch.tv/gamecheatday"
+        }
+      ],
+      "email": "ctf@gamecheatday.com",
+      "copyright": "CTF GameCheatDay 2026"
+    }
+  },
+  "malware": {
+    "site": {
+      "title": "MalwareLab CTF 2026 — Research & Defense",
+      "subtitle": "Analyze. Understand. Defend.",
+      "logo_icon": "shield",
+      "accent_color": "#a3e635"
+    },
+    "event": {
+      "name": "MalwareLab CTF 2026",
+      "date": "April 11–12, 2027",
+      "duration": "48 hours",
+      "location": "Isolated Sandbox Environment",
+      "organizer": "Security Club",
+      "flag_format": "MALWARE{...}"
+    },
+    "hero": {
+      "headline": "Write It. Understand It. Build Defenses That Stop It.",
+      "description": "MalwareLab CTF focuses on the development and analysis of malware archetypes — trojans, worms, ransomware simulations, and rootkits — in a fully isolated, authorized environment. By constructing and studying these threats firsthand, participants develop a deep, practitioner-level understanding of how malware operates, evades detection, and persists. Every offensive challenge is paired with a defensive analysis requirement, ensuring participants leave equipped to defend real systems against the threats they studied.",
+      "disclaimer": "FOR RESEARCH AND DEFENSIVE PURPOSES ONLY. All malware samples, tools, and techniques developed in this competition must remain strictly within the designated sandbox environment. Deploying, distributing, or using any code or technique from this competition against systems you do not own and are not explicitly authorized to test is illegal under computer crime laws in most jurisdictions. By participating, you agree to these terms unconditionally. The organizing team reserves the right to disqualify and report participants who violate these terms.",
+      "cta_text": "Register Now",
+      "cta_url": "#register",
+      "lab_cta_text": "View Lab Challenges",
+      "show_lab_link": true
+    },
+    "stats": [
+      {
+        "label": "Challenges",
+        "value": "6",
+        "icon": "layers"
+      },
+      {
+        "label": "Teams",
+        "value": "100+",
+        "icon": "users"
+      },
+      {
+        "label": "Prize Pool",
+        "value": "$2,000",
+        "icon": "award"
+      },
+      {
+        "label": "Hours",
+        "value": "48",
+        "icon": "clock"
+      }
+    ],
+    "categories": [
+      {
+        "icon": "puzzle",
+        "name": "Trojan Development",
+        "description": "Build a dropper and payload that masquerades as a legitimate binary and executes a hidden action."
+      },
+      {
+        "icon": "globe",
+        "name": "Worm Mechanics",
+        "description": "Simulate self-propagation across a sandboxed subnet using a disclosed vulnerability or credential reuse."
+      },
+      {
+        "icon": "lock",
+        "name": "Ransomware Simulation",
+        "description": "Implement the encryption and key exchange patterns used by ransomware — without real ransom or victim systems."
+      },
+      {
+        "icon": "eye",
+        "name": "Rootkit Techniques",
+        "description": "Explore userland and kernel-level hiding: process masking, file hiding, and hook-based concealment."
+      },
+      {
+        "icon": "terminal",
+        "name": "AV & EDR Evasion",
+        "description": "Study how malware evades signature and behavioral detection — to understand what defenders must improve."
+      },
+      {
+        "icon": "microscope",
+        "name": "Incident Response",
+        "description": "Analyze a provided malware sample end-to-end and produce a defender-grade incident report with IOCs and rules."
+      }
+    ],
+    "partners": [],
+    "schedule": [
+      {
+        "time": "Apr 11 – 10:00 UTC",
+        "event": "Competition opens — sandbox VMs provisioned, samples released"
+      },
+      {
+        "time": "Apr 11 – 12:00 UTC",
+        "event": "Opening stream — scope, rules, and tooling walkthrough"
+      },
+      {
+        "time": "Apr 12 – 06:00 UTC",
+        "event": "Submission deadline for all malware challenges"
+      },
+      {
+        "time": "Apr 12 – 08:00 UTC",
+        "event": "AV vendor analysis session — submissions tested against live AV engines"
+      },
+      {
+        "time": "Apr 12 – 12:00 UTC",
+        "event": "Award ceremony — defensive insights shared with all participants"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Why does this CTF involve writing malware?",
+        "a": "The most effective malware defenders are those who have built and analyzed real malware themselves. This competition creates a legal, controlled environment where that knowledge is built responsibly. Every challenge has a mandatory defensive analysis component — you are not done until you have documented how to detect what you built."
+      },
+      {
+        "q": "Is writing malware here legal?",
+        "a": "Yes — within the authorized lab environment. Participants operate exclusively on systems they are authorized to use, with no access to real networks or third-party systems. The legal boundary is clear: everything inside the lab is authorized; everything outside is not."
+      },
+      {
+        "q": "What malware archetypes are in scope?",
+        "a": "Trojans and droppers, worms (simulated propagation only), ransomware (encryption logic only — no real ransom, no real victims), rootkits (userland only unless a kernel lab is specified), and evasion-focused loaders. Destructive payloads, data exfiltration to external systems, and anything targeting real infrastructure are explicitly out of scope."
+      },
+      {
+        "q": "What happens to malware samples after the event?",
+        "a": "All samples remain inside the lab environment and are submitted to the organizing team for defensive research only. Samples are never published or redistributed. Participants may not retain copies outside the lab."
+      },
+      {
+        "q": "What if I accidentally break out of the sandbox?",
+        "a": "Immediately stop what you are doing and report it to the event organizers via the emergency contact in your participant pack. Do not attempt to continue or cover it up. We have monitoring in place and will treat transparent reports as accidents, not violations."
+      }
+    ],
+    "lab": {
+      "title": "Malware Lab Challenges",
+      "subtitle": "Sandboxed, isolated, and monitored — Windows & Linux targets",
+      "description": "Each challenge below operates in a fully isolated sandbox with no external network access. You will develop malware archetypes, run them against lab targets, analyze their behavior, and produce a defensive write-up. Flags are revealed when the technical objective is met. The defensive write-up for each challenge is mandatory and worth 50% of the challenge's total points.",
+      "disclaimer": "AUTHORIZED LAB ONLY — MONITORED AT ALL TIMES. All code must run exclusively inside the lab VM. No sample, tool, or technique from this competition may be used outside the authorized environment. Destructive payloads, real ransomware key infrastructure, and any action targeting systems outside the lab subnet are strictly prohibited and will result in immediate disqualification and referral to relevant authorities.",
+      "questions": [
+        {
+          "number": 1,
+          "title": "Trojan Dropper",
+          "description": "Create a Windows executable that appears to be a legitimate utility (e.g., a fake PDF viewer or system cleaner). When run, it silently drops and executes a secondary payload (a benign calculator binary provided by the lab). The dropper must bypass Windows SmartScreen in the lab environment. Submit the dropper's disguise technique and evasion method as the flag.",
+          "points": 200,
+          "hint": "Embedding the payload as a resource and using a legitimate-looking icon and version info are common first steps. For SmartScreen, consider code signing with the lab's test certificate or catalog-based bypass."
+        },
+        {
+          "number": 2,
+          "title": "Worm — Simulated Propagation",
+          "description": "Develop a worm that, once running on lab-host-01, automatically spreads to lab-host-02 and lab-host-03 using either a disclosed vulnerability (CVE listed in /lab/worm-targets.txt) or a simulated credential reuse attack using the lab's credential list. The worm must leave a marker file on each host it compromises. Submit the propagation method and marker file path as the flag.",
+          "points": 300,
+          "hint": "SMB credential reuse is a classic worm vector and straightforward to implement. Use the lab's provided credential list (admin:labpass123). Alternatively, the lab targets run a vulnerable service listed in worm-targets.txt."
+        },
+        {
+          "number": 3,
+          "title": "Ransomware — Encryption Pattern",
+          "description": "Implement the encryption logic used by ransomware: generate a session key, encrypt a directory of test files using AES-256, store the encrypted key (simulated as written to a local file — no real key server), and produce a ransom note. The lab provides a directory of dummy files to encrypt. Submit the encryption scheme and key storage method as the flag. No real ransom infrastructure, no victim contact — this is encryption logic only.",
+          "points": 350,
+          "hint": "Use AES-256 in CBC mode for file encryption and RSA-2048 to wrap the session key. The lab provides a test RSA key pair. Write the encrypted session key to encrypted_key.bin in the target directory."
+        },
+        {
+          "number": 4,
+          "title": "Persistence — Three Mechanisms",
+          "description": "Demonstrate three distinct persistence mechanisms on the Windows lab target, each surviving a full system reboot: (1) a registry run key, (2) a scheduled task, and (3) a Windows service. Each must execute a benign ping command on startup. Submit the name, path, and trigger of each mechanism as the flag.",
+          "points": 200,
+          "hint": "Use sc.exe or the Windows Service API for the service. For the scheduled task, schtasks /create is the simplest path. Document the exact registry key path for the run key — defenders will need this to write detection rules."
+        },
+        {
+          "number": 5,
+          "title": "AV Evasion — Bypass Signature Detection",
+          "description": "Take the dropper from Challenge 1 and modify it to bypass the AV engine running on the lab's isolated test VM (ClamAV + a commercial AV in the lab). The objective is not to 'win against AV' — it is to understand which evasion techniques trigger alerts and which do not. Document every technique you tried and its outcome. Submit the final evasion method and your detection bypass rate as the flag.",
+          "points": 300,
+          "hint": "Start by submitting the original binary to understand which signatures fire. Then try: string obfuscation, packing with UPX, XOR-encoding the payload, and sleep-based sandbox evasion. Document each result — the write-up is half the points."
+        },
+        {
+          "number": 6,
+          "title": "Incident Response — Full Analysis Report",
+          "description": "A pre-built malware sample (sample_unknown.exe) is provided in /lab/ir/. Perform a complete analysis: static (strings, imports, sections, packer), dynamic (API trace, file/registry/network activity), and behavioral (what does it ultimately do?). Produce an incident report with: a full IOC list, a kill chain diagram, three detection rules (Sigma or Yara), and recommended remediation steps. Submit your report to the referee portal to receive the flag.",
+          "points": 500,
+          "hint": "Start with FLOSS for strings, then PEStudio for static analysis. Use Process Monitor and Wireshark in the sandbox for dynamic analysis. The sample is packed — use x64dbg to dump it at OEP before deep static analysis."
+        }
+      ],
+      "rules": {
+        "allowed": [
+          "Develop and run all malware samples exclusively inside the provided sandbox VMs",
+          "Implement encryption, dropper, persistence, and evasion logic for educational purposes",
+          "Use any tool available in the lab (Ghidra, x64dbg, Python, Metasploit, ClamAV, etc.)",
+          "Reference publicly available malware analysis reports, academic papers, and CVE disclosures",
+          "Collaborate with your registered team members within your isolated lab segment"
+        ],
+        "not_allowed": [
+          "Run, distribute, or retain any malware sample outside the authorized lab environment",
+          "Implement real ransom key servers, real C2 callbacks to external infrastructure, or real victim targeting",
+          "Target any system outside the lab subnet — including your own machine",
+          "Use destructive payloads (disk wipers, MBR overwriters) on lab systems without explicit approval",
+          "Share malware code, evasion techniques, or challenge solutions with other teams during the event",
+          "Submit any sample to public malware analysis platforms (VirusTotal, Any.run) during the competition"
+        ]
+      }
+    },
+    "footer": {
+      "socials": [
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/malwarelab"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://twitter.com/malwarelab"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/malwarelab"
+        }
+      ],
+      "email": "ctf@malwarelab.io",
+      "copyright": "MalwareLab CTF 2026 — Research & Defensive Security"
+    }
+  },
+  "mobile": {
+    "site": {
+      "title": "MobileCTF 2026",
+      "subtitle": "Reverse. Hook. Intercept.",
+      "logo_icon": "shield",
+      "accent_color": "#34d399"
+    },
+    "event": {
+      "name": "MobileCTF 2026",
+      "date": "June 6–7, 2027",
+      "duration": "36 hours",
+      "location": "Online",
+      "organizer": "Security Club",
+      "flag_format": "MOB{...}"
+    },
+    "hero": {
+      "headline": "Reverse the App. Break the Pinning. Own the Device.",
+      "description": "Mobile applications are among the most underaudited attack surfaces in modern security. MobileCTF covers the full Android and iOS security testing lifecycle: static APK and IPA analysis, runtime manipulation with Frida, SSL pinning bypass, insecure storage exploitation, and mobile malware triage. All challenges run on provided emulators and test devices in the lab — no personal devices required.",
+      "cta_text": "Register Now",
+      "cta_url": "#register",
+      "lab_cta_text": "View Challenges",
+      "show_lab_link": true
+    },
+    "stats": [
+      {
+        "label": "Challenges",
+        "value": "8",
+        "icon": "layers"
+      },
+      {
+        "label": "Teams",
+        "value": "120+",
+        "icon": "users"
+      },
+      {
+        "label": "Prize Pool",
+        "value": "$1,500",
+        "icon": "award"
+      },
+      {
+        "label": "Hours",
+        "value": "36",
+        "icon": "clock"
+      }
+    ],
+    "categories": [
+      {
+        "icon": "microscope",
+        "name": "APK / IPA Reversing",
+        "description": "Decompile Android APKs and iOS IPAs to recover Java/Kotlin source, Objective-C/Swift logic, and embedded secrets."
+      },
+      {
+        "icon": "lock",
+        "name": "Certificate Pinning",
+        "description": "Bypass SSL/TLS certificate pinning implementations to intercept encrypted HTTPS traffic with a proxy."
+      },
+      {
+        "icon": "eye",
+        "name": "Insecure Storage",
+        "description": "Find sensitive data stored without protection: SharedPreferences, SQLite databases, Keychain, NSUserDefaults, and log files."
+      },
+      {
+        "icon": "terminal",
+        "name": "Frida & Runtime Hooks",
+        "description": "Use Frida to hook methods at runtime, dump decrypted payloads, bypass authentication checks, and trace API calls."
+      },
+      {
+        "icon": "shield",
+        "name": "Mobile Malware",
+        "description": "Analyze suspicious APKs: identify permissions abuse, hidden payloads, C2 callbacks, and obfuscated malicious logic."
+      },
+      {
+        "icon": "globe",
+        "name": "API & Backend",
+        "description": "Intercept mobile app traffic to find insecure API endpoints, broken object-level authorization, and leaked tokens."
+      }
+    ],
+    "partners": [],
+    "schedule": [
+      {
+        "time": "Jun 6 – 10:00 UTC",
+        "event": "Competition opens — APKs, IPAs, and emulator images released"
+      },
+      {
+        "time": "Jun 6 – 12:00 UTC",
+        "event": "Opening stream — tooling setup walkthrough (jadx, Frida, objection, Burp)"
+      },
+      {
+        "time": "Jun 6 – 20:00 UTC",
+        "event": "First-blood announcements"
+      },
+      {
+        "time": "Jun 7 – 10:00 UTC",
+        "event": "Submissions close"
+      },
+      {
+        "time": "Jun 7 – 12:00 UTC",
+        "event": "Award ceremony and solution writeup stream"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do I need a physical Android or iOS device?",
+        "a": "No. All challenges run on Android emulators (provided via the lab VM) and an iOS simulator. A rooted Android AVD is pre-configured with Frida server already running."
+      },
+      {
+        "q": "What tools are recommended?",
+        "a": "jadx and apktool for static analysis, Frida and objection for runtime hooks, Burp Suite for traffic interception, MobSF for quick automated scanning, and adb for device interaction. All are pre-installed in the lab VM."
+      },
+      {
+        "q": "Do I need to know Java or Kotlin for Android challenges?",
+        "a": "Reading decompiled Java/Kotlin helps but is not required for all challenges. Many flags can be extracted by pattern-matching strings, analyzing smali bytecode, or hooking at the right method without reading every line."
+      },
+      {
+        "q": "Are there iOS challenges?",
+        "a": "Yes — two challenges target iOS IPAs and use the provided iOS simulator. These focus on static analysis (class-dump, strings, plist inspection) rather than runtime exploitation, since iOS runtime hooking requires a jailbroken device."
+      },
+      {
+        "q": "What is the flag format?",
+        "a": "Flags are in MOB{...} format. They are embedded in the app binary, returned by the backend API once exploited, or printed by a Frida hook when the correct condition is met."
+      }
+    ],
+    "lab": {
+      "title": "Mobile Challenges",
+      "subtitle": "Android emulator + iOS simulator — lab VM required",
+      "description": "Eight challenges across Android and iOS. Static challenges can be solved without running the app; dynamic challenges require the lab emulator. All APKs and IPAs are purpose-built for this event. Flags are in MOB{...} format.",
+      "questions": [
+        {
+          "number": 1,
+          "title": "Hardcoded Secrets — Android (static)",
+          "description": "An Android APK (vault_app.apk) is provided. Decompile it with jadx. The app validates a PIN before granting access. Find the hardcoded PIN or the validation logic and extract the flag without running the app.",
+          "points": 100,
+          "hint": "Open the decompiled source in jadx-gui. Search for string comparisons involving 'pin', 'password', or 'secret'. The flag may be in a string resource file (res/values/strings.xml) rather than Java code."
+        },
+        {
+          "number": 2,
+          "title": "Insecure SharedPreferences",
+          "description": "Install login_app.apk on the lab emulator. Log in with the test account (user: guest, pass: guest123). The app stores session data insecurely after login. Pull the data directory from the emulator and find the flag stored in plaintext.",
+          "points": 150,
+          "hint": "Use `adb shell` to navigate to /data/data/<package_name>/shared_prefs/. Pull the XML files with `adb pull`. Look for any value that looks like a token, key, or flag."
+        },
+        {
+          "number": 3,
+          "title": "SQLite Database Extraction",
+          "description": "notes_app.apk stores user notes in a local SQLite database. Install the app, create a few notes, then extract and query the database. One note contains the flag — it was inserted by the app itself on first launch and is not visible in the UI.",
+          "points": 150,
+          "hint": "Pull /data/data/<package_name>/databases/ with adb. Open the .db file with sqlite3 or DB Browser for SQLite. Run `SELECT * FROM notes;` and check all rows, including those with a hidden or archived flag."
+        },
+        {
+          "number": 4,
+          "title": "SSL Pinning Bypass",
+          "description": "secure_api.apk communicates with a backend API over HTTPS with certificate pinning enabled — it rejects Burp Suite's proxy certificate. Use Frida and the objection toolkit to bypass the pinning at runtime, then intercept the app's traffic in Burp. The flag is returned by the /api/secret endpoint when called with a valid session token.",
+          "points": 250,
+          "hint": "Start the app with `objection -g <package> explore`, then run `android sslpinning disable`. If that fails, use a custom Frida script to hook TrustManager.checkServerTrusted() and OkHttp's CertificatePinner. Set Burp as the system proxy in the emulator's WiFi settings."
+        },
+        {
+          "number": 5,
+          "title": "Frida Hook — Authentication Bypass",
+          "description": "admin_app.apk has an admin panel that is only accessible to users with isAdmin == true. This value is set server-side and cannot be changed in the UI. Write a Frida script that hooks the method responsible for checking admin status and forces it to return true. The flag is displayed in the admin panel once accessed.",
+          "points": 300,
+          "hint": "Decompile the APK first to find the method name that checks admin status (look for methods returning boolean near 'admin' or 'role'). Then use Frida to hook it: `Java.use('com.example.app.AuthManager').isAdmin.implementation = function() { return true; }`"
+        },
+        {
+          "number": 6,
+          "title": "Obfuscated APK — Deobfuscate & Extract",
+          "description": "obfuscated_app.apk has been processed with ProGuard — class names, method names, and string constants are obfuscated. The app validates a license key using a multi-step algorithm. Deobfuscate the relevant logic, understand the key derivation, and extract or calculate the valid license key. The flag is revealed when the correct key is entered.",
+          "points": 350,
+          "hint": "Start by renaming obfuscated classes based on what they do, not what they're called. Look for the class that handles button click events on the license screen. String obfuscation is often done with a simple XOR or base64 — look for static initializers that decode values at runtime."
+        },
+        {
+          "number": 7,
+          "title": "Mobile Malware Triage — Suspicious APK",
+          "description": "malware_sample.apk was flagged by a user who downloaded it from a third-party app store. Analyze it statically and dynamically. Identify: (1) all dangerous permissions it requests and their purpose, (2) any hidden payload or second-stage download, (3) the C2 endpoint it contacts, and (4) the data it exfiltrates. Submit the C2 address and exfiltrated data type as the flag.",
+          "points": 350,
+          "hint": "Start with MobSF for an automated overview, then dig into the decompiled source manually. Look for BroadcastReceivers triggered on BOOT_COMPLETED, background Services, and any network calls to hardcoded IPs. Run it in the emulator with network traffic captured in Wireshark."
+        },
+        {
+          "number": 8,
+          "title": "iOS IPA Analysis — Hidden API Key",
+          "description": "A compiled iOS IPA (tracker_app.ipa) is provided. Extract the IPA, inspect the binary and bundle resources. The app contains a hardcoded API key used to authenticate with a tracking backend. Find the key — it is not in plaintext but is reconstructed from fragments at runtime. Submit the full reconstructed API key as the flag.",
+          "points": 400,
+          "hint": "Unzip the IPA and inspect the app bundle. Use `strings` on the Mach-O binary and search for base64 fragments. Use class-dump or ipsw to list Objective-C classes and methods. The key may be split across multiple string literals concatenated in a +load or viewDidLoad method."
+        }
+      ],
+      "rules": {
+        "allowed": [
+          "Use jadx, apktool, Frida, objection, Burp Suite, MobSF, adb, and any tool in the lab VM",
+          "Hook methods at runtime using Frida on the provided lab emulator",
+          "Modify APK smali code, recompile, and re-sign for static patching challenges",
+          "Intercept and modify HTTPS traffic using Burp Suite as a proxy on the lab emulator",
+          "Collaborate with your registered team members"
+        ],
+        "not_allowed": [
+          "Install or test challenge APKs on personal or real devices outside the lab environment",
+          "Attempt to contact real backend services — all network calls within challenges are routed to lab servers",
+          "Upload challenge APKs or IPAs to public analysis platforms (VirusTotal, MobSF cloud, etc.) during the event",
+          "Share flags or working Frida scripts with other teams during the competition",
+          "Attempt to attack the competition platform or other participants"
+        ]
+      }
+    },
+    "footer": {
+      "socials": [
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/mobilectf"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://twitter.com/mobilectf"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/mobilectf"
+        }
+      ],
+      "email": "ctf@mobilectf.io",
+      "copyright": "MobileCTF 2026"
+    }
+  },
+  "reday": {
+    "site": {
+      "title": "RE Day 2026",
+      "subtitle": "Disassemble. Understand. Conquer.",
+      "logo_icon": "microscope",
+      "accent_color": "#a855f7"
+    },
+    "event": {
+      "name": "RE Day 2026",
+      "date": "January 17–18, 2027",
+      "duration": "48 hours",
+      "location": "Online",
+      "organizer": "Security Club",
+      "flag_format": "RE{...}"
+    },
+    "hero": {
+      "headline": "Disassemble. Understand. Conquer.",
+      "description": "A deep-dive reverse engineering competition. Peel back layers of obfuscation, trace execution paths, and extract flags hidden in binaries, firmware, and protocols.",
+      "cta_text": "Register Now",
+      "cta_url": "#register",
+      "lab_cta_text": "View RE Challenges",
+      "show_lab_link": true
+    },
+    "stats": [
+      {
+        "label": "Binaries",
+        "value": "25+",
+        "icon": "layers"
+      },
+      {
+        "label": "Teams",
+        "value": "200+",
+        "icon": "users"
+      },
+      {
+        "label": "Prize Pool",
+        "value": "$2,500",
+        "icon": "award"
+      },
+      {
+        "label": "Hours",
+        "value": "48",
+        "icon": "clock"
+      }
+    ],
+    "categories": [
+      {
+        "icon": "microscope",
+        "name": "Static Analysis",
+        "description": "Disassemble and decompile binaries without executing them."
+      },
+      {
+        "icon": "terminal",
+        "name": "Dynamic Analysis",
+        "description": "Trace execution, hook functions, and instrument running code."
+      },
+      {
+        "icon": "shield",
+        "name": "Malware Analysis",
+        "description": "Analyze malicious code samples safely inside a sandboxed VM."
+      },
+      {
+        "icon": "layers",
+        "name": "Firmware RE",
+        "description": "Extract and reverse engineer embedded device firmware images."
+      },
+      {
+        "icon": "eye",
+        "name": "Obfuscation",
+        "description": "Defeat VM-based protectors, control-flow flattening, and junk code."
+      },
+      {
+        "icon": "globe",
+        "name": "Protocol RE",
+        "description": "Reverse engineer undocumented binary network protocols and file formats."
+      }
+    ],
+    "partners": [],
+    "schedule": [
+      {
+        "time": "Jan 17 – 10:00 UTC",
+        "event": "Competition opens, all challenges released"
+      },
+      {
+        "time": "Jan 17 – 14:00 UTC",
+        "event": "Opening ceremony livestream"
+      },
+      {
+        "time": "Jan 18 – 10:00 UTC",
+        "event": "Submissions close"
+      },
+      {
+        "time": "Jan 18 – 14:00 UTC",
+        "event": "Award ceremony and community writeup stream"
+      }
+    ],
+    "faq": [
+      {
+        "q": "What architectures are covered?",
+        "a": "Primarily x86/x64, but expect ARM, MIPS, and custom VMs in higher-difficulty challenges."
+      },
+      {
+        "q": "What tools are recommended?",
+        "a": "Ghidra, IDA Free, Binary Ninja, Radare2, x64dbg/GDB, pwndbg, and Frida are all commonly used. The lab VM has these pre-installed."
+      },
+      {
+        "q": "Are the malware samples dangerous?",
+        "a": "No. All malware samples are defanged — network callbacks are redirected and destructive payloads are neutered. Still, work inside the provided sandbox VM."
+      },
+      {
+        "q": "What is the flag format?",
+        "a": "Flags are in RE{...} format and are embedded within the binary or revealed upon successful analysis."
+      }
+    ],
+    "lab": {
+      "title": "RE Challenges",
+      "subtitle": "Binaries and firmware targets",
+      "description": "Analyze the provided targets and extract the hidden flag from each. Work inside the lab VM — do not run unknown binaries on your host machine. Flags are in RE{...} format.",
+      "questions": [
+        {
+          "number": 1,
+          "title": "intro_x64",
+          "description": "A stripped ELF x64 binary. It accepts a string argument and prints 'Correct!' if the input matches the expected value. Find the expected string and submit the flag.",
+          "points": 100,
+          "hint": "Open in Ghidra. Find main(), follow the string comparison, and read off the expected bytes."
+        },
+        {
+          "number": 2,
+          "title": "vm_check",
+          "description": "A Windows PE that implements a small custom bytecode VM to verify a password. Reconstruct the VM opcodes and determine the correct password.",
+          "points": 300,
+          "hint": "Look for a dispatch loop — a switch or jump table indexed by the opcode byte."
+        },
+        {
+          "number": 3,
+          "title": "router_fw.bin",
+          "description": "A firmware image from a consumer router. Extract the filesystem, find the hidden flag file, and determine the credentials used to protect it.",
+          "points": 350,
+          "hint": "Use binwalk to extract the firmware. The flag is not in plaintext — check config files and compiled binaries inside."
+        },
+        {
+          "number": 4,
+          "title": "mystery.pcap + decoder",
+          "description": "A packet capture file and an unknown binary that speaks the same protocol. Reverse the binary's protocol handler and decode the flag transmitted in the capture.",
+          "points": 400,
+          "hint": ""
+        }
+      ],
+      "rules": {
+        "allowed": [
+          "Use any RE tool — Ghidra, IDA, Binary Ninja, x64dbg, GDB, Frida, etc.",
+          "Run provided binaries inside the lab VM only",
+          "Use dynamic analysis, tracing, and hooking on lab targets",
+          "Search online for general techniques, documentation, and writeups on similar challenges",
+          "Collaborate with your registered team members"
+        ],
+        "not_allowed": [
+          "Run any lab binary outside the provided sandbox VM",
+          "Share flags or full solutions with other teams during the event",
+          "Exfiltrate any lab files outside the competition environment",
+          "Attempt to attack competition infrastructure or other participants' lab instances"
+        ]
+      }
+    },
+    "footer": {
+      "socials": [
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/reday"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://twitter.com/reday"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://facebook.com/reday"
+        }
+      ],
+      "email": "ctf@reday.io",
+      "copyright": "RE Day 2026"
+    }
+  },
+  "zeroday": {
+    "site": {
+      "title": "0day CTF 2026 — Vulnerability Research",
+      "subtitle": "Find the unknown. Report responsibly.",
+      "logo_icon": "eye",
+      "accent_color": "#818cf8"
+    },
+    "event": {
+      "name": "0day CTF 2026",
+      "date": "May 9–10, 2027",
+      "duration": "48 hours",
+      "location": "Isolated Research Environment",
+      "organizer": "Security Club",
+      "flag_format": "0DAY{...}"
+    },
+    "hero": {
+      "headline": "Find What No One Has Found Before.",
+      "description": "Zero-day research is the frontier of offensive security — discovering vulnerabilities that exist in software before any vendor, researcher, or attacker has publicly identified them. This CTF provides a controlled, legally authorized environment to practice the full zero-day research lifecycle: systematic vulnerability discovery, root-cause analysis, exploit development, and responsible coordinated disclosure. All targets are purpose-built or provided explicitly for this event. The goal is to build researchers who find bugs to fix them, not to weaponize them.",
+      "disclaimer": "FOR AUTHORIZED RESEARCH ONLY. All vulnerability research, fuzzing, and exploit development must be conducted exclusively against the designated lab targets. Applying these techniques against real software, systems, or infrastructure you do not own and are not authorized to test is illegal under computer fraud and abuse laws worldwide. Any real zero-day vulnerabilities discovered — in lab targets or otherwise — must be reported through responsible disclosure, not sold, withheld, or weaponized. By participating, you agree to these terms unconditionally.",
+      "cta_text": "Register Now",
+      "cta_url": "#register",
+      "lab_cta_text": "View Research Targets",
+      "show_lab_link": true
+    },
+    "stats": [
+      {
+        "label": "Targets",
+        "value": "6",
+        "icon": "layers"
+      },
+      {
+        "label": "Teams",
+        "value": "60+",
+        "icon": "users"
+      },
+      {
+        "label": "Prize Pool",
+        "value": "$3,000",
+        "icon": "award"
+      },
+      {
+        "label": "Hours",
+        "value": "48",
+        "icon": "clock"
+      }
+    ],
+    "categories": [
+      {
+        "icon": "microscope",
+        "name": "Vulnerability Research",
+        "description": "Systematic methodology for auditing code and identifying unknown security flaws before attackers do."
+      },
+      {
+        "icon": "terminal",
+        "name": "Fuzzing & Coverage",
+        "description": "Automated vulnerability discovery using coverage-guided fuzzers like AFL++ and libFuzzer."
+      },
+      {
+        "icon": "puzzle",
+        "name": "Memory Corruption",
+        "description": "Stack and heap buffer overflows, use-after-free, type confusion, and out-of-bounds read/write."
+      },
+      {
+        "icon": "eye",
+        "name": "Logic & Auth Flaws",
+        "description": "Authentication bypass, race conditions, integer overflows, and business logic vulnerabilities."
+      },
+      {
+        "icon": "layers",
+        "name": "Exploit Development",
+        "description": "Turn a confirmed bug into a reliable, weaponizable proof-of-concept under modern mitigations (ASLR, NX, CFG)."
+      },
+      {
+        "icon": "shield",
+        "name": "Responsible Disclosure",
+        "description": "Write a complete CVE-style vulnerability report and walk through the coordinated disclosure process."
+      }
+    ],
+    "partners": [],
+    "schedule": [
+      {
+        "time": "May 9 – 10:00 UTC",
+        "event": "Competition opens — lab targets and source packages released"
+      },
+      {
+        "time": "May 9 – 12:00 UTC",
+        "event": "Opening stream — vulnerability research methodology walkthrough"
+      },
+      {
+        "time": "May 9 – 20:00 UTC",
+        "event": "First-blood announcements for each target"
+      },
+      {
+        "time": "May 10 – 06:00 UTC",
+        "event": "Exploit submission deadline"
+      },
+      {
+        "time": "May 10 – 10:00 UTC",
+        "event": "Disclosure report submission deadline"
+      },
+      {
+        "time": "May 10 – 12:00 UTC",
+        "event": "Award ceremony — top findings presented, mitigations discussed"
+      }
+    ],
+    "faq": [
+      {
+        "q": "What makes this different from a regular pwn CTF?",
+        "a": "Standard pwn challenges hand you a known vulnerability and ask you to exploit it. This CTF asks you to find the vulnerability first — the bug is unknown, undocumented, and unreported. You are doing real zero-day research on purpose-built targets."
+      },
+      {
+        "q": "Are the targets real software?",
+        "a": "Targets are purpose-built binaries and services designed to contain realistic vulnerability classes. Some targets are inspired by real CVEs in structure but are not the actual vulnerable software. Source code is provided for some targets; others are black-box."
+      },
+      {
+        "q": "What if I find a real zero-day in real software during the event?",
+        "a": "Report it to the organizers immediately. We will help you go through coordinated disclosure with the vendor. Under no circumstances should you exploit, sell, or publicly disclose a real vulnerability without following responsible disclosure first."
+      },
+      {
+        "q": "What mitigations are enabled on targets?",
+        "a": "Targets run with realistic modern mitigations: ASLR, NX/DEP, stack canaries, and PIE are enabled by default. Some challenges disable specific mitigations as the vulnerability class requires — this is documented per-challenge."
+      },
+      {
+        "q": "Is selling zero-days legal?",
+        "a": "This varies by jurisdiction and is a legally complex area. For this competition: all discovered vulnerabilities in lab targets are competition property. Techniques learned here must not be used to discover, develop, or sell exploits against real systems outside the authorized lab."
+      }
+    ],
+    "lab": {
+      "title": "Research Targets",
+      "subtitle": "Black-box and white-box — fuzzing and manual audit",
+      "description": "Six targets are provided in increasing difficulty. For each: find at least one exploitable vulnerability, demonstrate it with a working proof-of-concept, and submit a disclosure-quality write-up. Flags are revealed when your PoC achieves the stated impact (e.g., arbitrary code execution, authentication bypass, or memory leak). The disclosure report is mandatory and weighted equally with the technical exploit.",
+      "disclaimer": "AUTHORIZED TARGETS ONLY — ALL ACTIVITY IS LOGGED. All fuzzing, debugging, and exploitation must target only the binaries and services listed below, running inside the lab VM. Do not scan, probe, or fuzz any host outside the lab environment. Real zero-day techniques carry serious legal weight — you are practicing them here under explicit authorization. Using anything you learn here against unauthorized systems is a criminal offense.",
+      "questions": [
+        {
+          "number": 1,
+          "title": "Fuzz & Crash — target01 (white-box)",
+          "description": "Source code for target01 (a simple file parser) is provided in /lab/target01/. Set up AFL++ with coverage instrumentation, fuzz the parser, and produce at least one unique crash. Classify the crash: determine whether it is exploitable (write-what-where, control of RIP, or info leak). Submit the crash input and exploitability classification as the flag.",
+          "points": 150,
+          "hint": "Compile with afl-cc -fsanitize=address for best crash visibility. Start with a small corpus of valid input files. Use afl-tmin to minimize the crashing input before analysis."
+        },
+        {
+          "number": 2,
+          "title": "Root Cause Analysis — provided crash",
+          "description": "A pre-generated crash (core dump + reproducer) for target02 is provided in /lab/target02/. Without source code, determine: (1) the exact vulnerable code path, (2) the vulnerability class (BOF, UAF, integer overflow, etc.), (3) which mitigations are bypassable, and (4) the minimum primitives available to an attacker. Submit the vulnerability class and exploitable primitive as the flag.",
+          "points": 200,
+          "hint": "Open the core dump in GDB with PEDA or pwndbg. Run `bt` for the backtrace. Use `info registers` to see what an attacker controls at the crash point. Cross-reference with the binary in Ghidra."
+        },
+        {
+          "number": 3,
+          "title": "Stack Exploitation — target03 (ASLR + NX, no canary)",
+          "description": "target03 is a network service with a classic stack buffer overflow. ASLR and NX are enabled; stack canaries are disabled. Develop a working ROP chain that achieves arbitrary code execution (spawn /bin/sh on the lab host). Submit the working exploit script and the shell session proof as the flag.",
+          "points": 350,
+          "hint": "Use ROPgadget or ropper to build your chain. The binary is not PIE — base addresses are static. Leak a libc address via a puts() call to defeat ASLR, then ret2libc. Use pwntools for socket interaction."
+        },
+        {
+          "number": 4,
+          "title": "Heap Exploitation — target04 (full mitigations)",
+          "description": "target04 is a binary with a use-after-free vulnerability. All mitigations are enabled: ASLR, NX, PIE, and stack canaries. Exploit the UAF to achieve arbitrary read/write, leak a heap and libc address, and gain code execution. Submit your exploit and the achieved impact as the flag.",
+          "points": 500,
+          "hint": "Trigger the UAF by freeing an object and then reallocating it with a different type (type confusion). Use the resulting controlled read to leak a libc pointer from the freed chunk's fd/bk fields. House of Force or tcache poisoning are common next steps."
+        },
+        {
+          "number": 5,
+          "title": "Logic Flaw — authentication bypass in target05 web app",
+          "description": "target05 is a black-box web application running on the lab host at port 8080. It has a JWT-based login and an admin panel. No source code is provided. Find and exploit a logic or authentication flaw to access the admin panel without valid credentials. The flag is displayed in the admin panel once accessed.",
+          "points": 300,
+          "hint": "Start with common JWT weaknesses: algorithm confusion (HS256 vs RS256), the 'none' algorithm, weak secret brute-force, and claim validation bypass. Also check for path traversal or IDOR to the admin endpoints."
+        },
+        {
+          "number": 6,
+          "title": "Full Chain + Disclosure Report",
+          "description": "Combine a vulnerability from target03 or target04 with the authentication bypass from target05 into a full exploit chain that achieves remote code execution starting from zero authentication. Then write a complete CVE-style disclosure report covering: vulnerability description, affected component, CVSS score with justification, proof-of-concept steps, root cause, and recommended fix. Submit both the chain PoC and the report to the referee portal.",
+          "points": 600,
+          "hint": ""
+        }
+      ],
+      "rules": {
+        "allowed": [
+          "Fuzz, debug, and exploit all targets listed above inside the lab VM",
+          "Use any tool available in the lab: AFL++, GDB, pwndbg, Ghidra, Burp Suite, pwntools, ROPgadget",
+          "Review publicly documented vulnerability classes and exploit techniques",
+          "Collaborate with your registered team members within your isolated lab segment",
+          "Report any unexpected behavior or accidental sandbox escape to organizers immediately"
+        ],
+        "not_allowed": [
+          "Target any host, service, or binary outside the designated lab environment",
+          "Scan, probe, or fuzz real software or systems outside the lab — including open-source projects",
+          "Sell, withhold, or publicly disclose any vulnerability found during this competition without coordinated disclosure",
+          "Share working exploits or vulnerability details with other teams during the event",
+          "Attempt to escape the lab VM or reach external networks"
+        ]
+      }
+    },
+    "footer": {
+      "socials": [
+        {
+          "label": "Discord",
+          "url": "https://discord.gg/0dayctf"
+        },
+        {
+          "label": "Twitter",
+          "url": "https://twitter.com/0dayctf"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/0dayctf"
+        }
+      ],
+      "email": "ctf@0dayctf.io",
+      "copyright": "0day CTF 2026 — Vulnerability Research & Responsible Disclosure"
+    }
+  }
+}
