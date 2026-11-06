@@ -1,0 +1,115 @@
+{
+  "site": {
+    "title": "CrackingDay 2026",
+    "subtitle": "Break. Patch. Own.",
+    "logo_icon": "lock",
+    "accent_color": "#ff9500"
+  },
+  "event": {
+    "name": "CrackingDay 2026",
+    "date": "December 7–8, 2026",
+    "duration": "36 hours",
+    "location": "Online",
+    "organizer": "Security Club",
+    "flag_format": "CRACK{...}"
+  },
+  "hero": {
+    "headline": "Break the Code. Own the License.",
+    "description": "A hands-on crackme competition using fully authorized software targets. Analyze protections, write patches, and build keygens — all legally, all in a sandboxed lab.",
+    "cta_text": "Register Now",
+    "cta_url": "#register",
+    "lab_cta_text": "View Lab Targets",
+    "show_lab_link": true
+  },
+  "stats": [
+    { "label": "Crackmes",   "value": "20+",   "icon": "lock"   },
+    { "label": "Teams",      "value": "150+",  "icon": "users"  },
+    { "label": "Prize Pool", "value": "$1,500","icon": "award"  },
+    { "label": "Hours",      "value": "36",    "icon": "clock"  }
+  ],
+  "categories": [
+    { "icon": "lock",        "name": "License Analysis", "description": "Analyze license key validation algorithms and protection schemes." },
+    { "icon": "terminal",    "name": "Patch Writing",    "description": "Write minimal binary patches to bypass protection checks." },
+    { "icon": "layers",      "name": "Keygen",           "description": "Reverse the registration algorithm and implement a working keygen." },
+    { "icon": "eye",         "name": "Anti-Debug",       "description": "Bypass debugger detection, timing checks, and anti-tamper measures." },
+    { "icon": "puzzle",      "name": "Packer Bypass",    "description": "Unpack and reconstruct protected or compressed executables." },
+    { "icon": "microscope",  "name": "Serial Fishing",   "description": "Locate serial validation routines and extract correct serials." }
+  ],
+  "partners": [],
+  "schedule": [
+    { "time": "Dec 7 – 10:00 UTC", "event": "Competition opens, crackme targets released" },
+    { "time": "Dec 7 – 12:00 UTC", "event": "Opening stream — walkthrough of rules & tools" },
+    { "time": "Dec 8 – 10:00 UTC", "event": "Submissions close" },
+    { "time": "Dec 8 – 12:00 UTC", "event": "Award ceremony and solution writeups" }
+  ],
+  "faq": [
+    {
+      "q": "Are the software targets legal to crack?",
+      "a": "Yes. Every target is purpose-built crackme software or software provided explicitly for this event under license. Cracking real commercial software is not part of this competition."
+    },
+    {
+      "q": "What tools are allowed?",
+      "a": "Any tool is allowed: IDA Pro, Ghidra, x64dbg, Cheat Engine, Binary Ninja, etc. The lab machine has a standard toolkit pre-installed."
+    },
+    {
+      "q": "What is the flag format?",
+      "a": "Flags are in CRACK{...} format. Each crackme reveals the flag when successfully cracked or patched."
+    },
+    {
+      "q": "Can I share my patches after the event?",
+      "a": "Yes — after the event ends, writeups and patches are encouraged to be shared publicly for learning purposes."
+    }
+  ],
+  "lab": {
+    "title": "Lab Targets",
+    "subtitle": "Authorized crackme binaries",
+    "description": "All targets below are purpose-built or explicitly licensed for this competition. Do not attempt to crack software outside this list. Flags are in CRACK{...} format.",
+    "questions": [
+      {
+        "number": 1,
+        "title": "SimpleSerial.exe",
+        "description": "A Windows x86 application protected by a simple serial number check. Enter the correct serial to reveal the flag. No obfuscation.",
+        "points": 100,
+        "hint": "Set a breakpoint on common string comparison functions. Look for the comparison between your input and the expected value."
+      },
+      {
+        "number": 2,
+        "title": "PatchMe.exe",
+        "description": "The application shows 'License Expired' on launch. Patch the binary so it always passes the license date check.",
+        "points": 200,
+        "hint": "Find the conditional jump after the date comparison and change its direction."
+      },
+      {
+        "number": 3,
+        "title": "KeygenMe.exe",
+        "description": "Reverse the registration algorithm and write a keygen that produces a valid serial for any given username. Submit a valid serial for the username 'CrackingDay2026'.",
+        "points": 400,
+        "hint": ""
+      }
+    ],
+    "rules": {
+      "allowed": [
+        "Use any reverse engineering tool (Ghidra, IDA, x64dbg, Binary Ninja, etc.)",
+        "Patch binaries using hex editors or patching tools",
+        "Use dynamic analysis — debuggers, tracers, API monitors",
+        "Search online for general techniques and documentation",
+        "Collaborate with registered team members"
+      ],
+      "not_allowed": [
+        "Crack or tamper with software outside the provided target list",
+        "Share flags, patches, or keygens with other teams during the event",
+        "Distribute cracked versions of any software publicly",
+        "Attempt to attack competition infrastructure"
+      ]
+    }
+  },
+  "footer": {
+    "socials": [
+      { "label": "Discord",  "url": "https://discord.gg/crackingday"   },
+      { "label": "Twitter",  "url": "https://twitter.com/crackingday"  },
+      { "label": "Facebook", "url": "https://facebook.com/crackingday" }
+    ],
+    "email": "ctf@crackingday.com",
+    "copyright": "CrackingDay 2026"
+  }
+}

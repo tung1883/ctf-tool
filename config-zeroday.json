@@ -1,0 +1,145 @@
+{
+  "site": {
+    "title": "0day CTF 2026 — Vulnerability Research",
+    "subtitle": "Find the unknown. Report responsibly.",
+    "logo_icon": "eye",
+    "accent_color": "#818cf8"
+  },
+  "event": {
+    "name": "0day CTF 2026",
+    "date": "May 9–10, 2027",
+    "duration": "48 hours",
+    "location": "Isolated Research Environment",
+    "organizer": "Security Club",
+    "flag_format": "0DAY{...}"
+  },
+  "hero": {
+    "headline": "Find What No One Has Found Before.",
+    "description": "Zero-day research is the frontier of offensive security — discovering vulnerabilities that exist in software before any vendor, researcher, or attacker has publicly identified them. This CTF provides a controlled, legally authorized environment to practice the full zero-day research lifecycle: systematic vulnerability discovery, root-cause analysis, exploit development, and responsible coordinated disclosure. All targets are purpose-built or provided explicitly for this event. The goal is to build researchers who find bugs to fix them, not to weaponize them.",
+    "disclaimer": "FOR AUTHORIZED RESEARCH ONLY. All vulnerability research, fuzzing, and exploit development must be conducted exclusively against the designated lab targets. Applying these techniques against real software, systems, or infrastructure you do not own and are not authorized to test is illegal under computer fraud and abuse laws worldwide. Any real zero-day vulnerabilities discovered — in lab targets or otherwise — must be reported through responsible disclosure, not sold, withheld, or weaponized. By participating, you agree to these terms unconditionally.",
+    "cta_text": "Register Now",
+    "cta_url": "#register",
+    "lab_cta_text": "View Research Targets",
+    "show_lab_link": true
+  },
+  "stats": [
+    { "label": "Targets",    "value": "6",     "icon": "layers"  },
+    { "label": "Teams",      "value": "60+",   "icon": "users"   },
+    { "label": "Prize Pool", "value": "$3,000","icon": "award"   },
+    { "label": "Hours",      "value": "48",    "icon": "clock"   }
+  ],
+  "categories": [
+    { "icon": "microscope", "name": "Vulnerability Research",  "description": "Systematic methodology for auditing code and identifying unknown security flaws before attackers do." },
+    { "icon": "terminal",   "name": "Fuzzing & Coverage",      "description": "Automated vulnerability discovery using coverage-guided fuzzers like AFL++ and libFuzzer." },
+    { "icon": "puzzle",     "name": "Memory Corruption",       "description": "Stack and heap buffer overflows, use-after-free, type confusion, and out-of-bounds read/write." },
+    { "icon": "eye",        "name": "Logic & Auth Flaws",      "description": "Authentication bypass, race conditions, integer overflows, and business logic vulnerabilities." },
+    { "icon": "layers",     "name": "Exploit Development",     "description": "Turn a confirmed bug into a reliable, weaponizable proof-of-concept under modern mitigations (ASLR, NX, CFG)." },
+    { "icon": "shield",     "name": "Responsible Disclosure",  "description": "Write a complete CVE-style vulnerability report and walk through the coordinated disclosure process." }
+  ],
+  "partners": [],
+  "schedule": [
+    { "time": "May 9 – 10:00 UTC",  "event": "Competition opens — lab targets and source packages released" },
+    { "time": "May 9 – 12:00 UTC",  "event": "Opening stream — vulnerability research methodology walkthrough" },
+    { "time": "May 9 – 20:00 UTC",  "event": "First-blood announcements for each target" },
+    { "time": "May 10 – 06:00 UTC", "event": "Exploit submission deadline" },
+    { "time": "May 10 – 10:00 UTC", "event": "Disclosure report submission deadline" },
+    { "time": "May 10 – 12:00 UTC", "event": "Award ceremony — top findings presented, mitigations discussed" }
+  ],
+  "faq": [
+    {
+      "q": "What makes this different from a regular pwn CTF?",
+      "a": "Standard pwn challenges hand you a known vulnerability and ask you to exploit it. This CTF asks you to find the vulnerability first — the bug is unknown, undocumented, and unreported. You are doing real zero-day research on purpose-built targets."
+    },
+    {
+      "q": "Are the targets real software?",
+      "a": "Targets are purpose-built binaries and services designed to contain realistic vulnerability classes. Some targets are inspired by real CVEs in structure but are not the actual vulnerable software. Source code is provided for some targets; others are black-box."
+    },
+    {
+      "q": "What if I find a real zero-day in real software during the event?",
+      "a": "Report it to the organizers immediately. We will help you go through coordinated disclosure with the vendor. Under no circumstances should you exploit, sell, or publicly disclose a real vulnerability without following responsible disclosure first."
+    },
+    {
+      "q": "What mitigations are enabled on targets?",
+      "a": "Targets run with realistic modern mitigations: ASLR, NX/DEP, stack canaries, and PIE are enabled by default. Some challenges disable specific mitigations as the vulnerability class requires — this is documented per-challenge."
+    },
+    {
+      "q": "Is selling zero-days legal?",
+      "a": "This varies by jurisdiction and is a legally complex area. For this competition: all discovered vulnerabilities in lab targets are competition property. Techniques learned here must not be used to discover, develop, or sell exploits against real systems outside the authorized lab."
+    }
+  ],
+  "lab": {
+    "title": "Research Targets",
+    "subtitle": "Black-box and white-box — fuzzing and manual audit",
+    "description": "Six targets are provided in increasing difficulty. For each: find at least one exploitable vulnerability, demonstrate it with a working proof-of-concept, and submit a disclosure-quality write-up. Flags are revealed when your PoC achieves the stated impact (e.g., arbitrary code execution, authentication bypass, or memory leak). The disclosure report is mandatory and weighted equally with the technical exploit.",
+    "disclaimer": "AUTHORIZED TARGETS ONLY — ALL ACTIVITY IS LOGGED. All fuzzing, debugging, and exploitation must target only the binaries and services listed below, running inside the lab VM. Do not scan, probe, or fuzz any host outside the lab environment. Real zero-day techniques carry serious legal weight — you are practicing them here under explicit authorization. Using anything you learn here against unauthorized systems is a criminal offense.",
+    "questions": [
+      {
+        "number": 1,
+        "title": "Fuzz & Crash — target01 (white-box)",
+        "description": "Source code for target01 (a simple file parser) is provided in /lab/target01/. Set up AFL++ with coverage instrumentation, fuzz the parser, and produce at least one unique crash. Classify the crash: determine whether it is exploitable (write-what-where, control of RIP, or info leak). Submit the crash input and exploitability classification as the flag.",
+        "points": 150,
+        "hint": "Compile with afl-cc -fsanitize=address for best crash visibility. Start with a small corpus of valid input files. Use afl-tmin to minimize the crashing input before analysis."
+      },
+      {
+        "number": 2,
+        "title": "Root Cause Analysis — provided crash",
+        "description": "A pre-generated crash (core dump + reproducer) for target02 is provided in /lab/target02/. Without source code, determine: (1) the exact vulnerable code path, (2) the vulnerability class (BOF, UAF, integer overflow, etc.), (3) which mitigations are bypassable, and (4) the minimum primitives available to an attacker. Submit the vulnerability class and exploitable primitive as the flag.",
+        "points": 200,
+        "hint": "Open the core dump in GDB with PEDA or pwndbg. Run `bt` for the backtrace. Use `info registers` to see what an attacker controls at the crash point. Cross-reference with the binary in Ghidra."
+      },
+      {
+        "number": 3,
+        "title": "Stack Exploitation — target03 (ASLR + NX, no canary)",
+        "description": "target03 is a network service with a classic stack buffer overflow. ASLR and NX are enabled; stack canaries are disabled. Develop a working ROP chain that achieves arbitrary code execution (spawn /bin/sh on the lab host). Submit the working exploit script and the shell session proof as the flag.",
+        "points": 350,
+        "hint": "Use ROPgadget or ropper to build your chain. The binary is not PIE — base addresses are static. Leak a libc address via a puts() call to defeat ASLR, then ret2libc. Use pwntools for socket interaction."
+      },
+      {
+        "number": 4,
+        "title": "Heap Exploitation — target04 (full mitigations)",
+        "description": "target04 is a binary with a use-after-free vulnerability. All mitigations are enabled: ASLR, NX, PIE, and stack canaries. Exploit the UAF to achieve arbitrary read/write, leak a heap and libc address, and gain code execution. Submit your exploit and the achieved impact as the flag.",
+        "points": 500,
+        "hint": "Trigger the UAF by freeing an object and then reallocating it with a different type (type confusion). Use the resulting controlled read to leak a libc pointer from the freed chunk's fd/bk fields. House of Force or tcache poisoning are common next steps."
+      },
+      {
+        "number": 5,
+        "title": "Logic Flaw — authentication bypass in target05 web app",
+        "description": "target05 is a black-box web application running on the lab host at port 8080. It has a JWT-based login and an admin panel. No source code is provided. Find and exploit a logic or authentication flaw to access the admin panel without valid credentials. The flag is displayed in the admin panel once accessed.",
+        "points": 300,
+        "hint": "Start with common JWT weaknesses: algorithm confusion (HS256 vs RS256), the 'none' algorithm, weak secret brute-force, and claim validation bypass. Also check for path traversal or IDOR to the admin endpoints."
+      },
+      {
+        "number": 6,
+        "title": "Full Chain + Disclosure Report",
+        "description": "Combine a vulnerability from target03 or target04 with the authentication bypass from target05 into a full exploit chain that achieves remote code execution starting from zero authentication. Then write a complete CVE-style disclosure report covering: vulnerability description, affected component, CVSS score with justification, proof-of-concept steps, root cause, and recommended fix. Submit both the chain PoC and the report to the referee portal.",
+        "points": 600,
+        "hint": ""
+      }
+    ],
+    "rules": {
+      "allowed": [
+        "Fuzz, debug, and exploit all targets listed above inside the lab VM",
+        "Use any tool available in the lab: AFL++, GDB, pwndbg, Ghidra, Burp Suite, pwntools, ROPgadget",
+        "Review publicly documented vulnerability classes and exploit techniques",
+        "Collaborate with your registered team members within your isolated lab segment",
+        "Report any unexpected behavior or accidental sandbox escape to organizers immediately"
+      ],
+      "not_allowed": [
+        "Target any host, service, or binary outside the designated lab environment",
+        "Scan, probe, or fuzz real software or systems outside the lab — including open-source projects",
+        "Sell, withhold, or publicly disclose any vulnerability found during this competition without coordinated disclosure",
+        "Share working exploits or vulnerability details with other teams during the event",
+        "Attempt to escape the lab VM or reach external networks"
+      ]
+    }
+  },
+  "footer": {
+    "socials": [
+      { "label": "Discord",  "url": "https://discord.gg/0dayctf"   },
+      { "label": "Twitter",  "url": "https://twitter.com/0dayctf"  },
+      { "label": "GitHub",   "url": "https://github.com/0dayctf"   }
+    ],
+    "email": "ctf@0dayctf.io",
+    "copyright": "0day CTF 2026 — Vulnerability Research & Responsible Disclosure"
+  }
+}

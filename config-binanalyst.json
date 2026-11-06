@@ -1,0 +1,131 @@
+{
+  "site": {
+    "title": "Binary Threat Analysis — Active Incident",
+    "subtitle": "Classify. Decompile. Report.",
+    "logo_icon": "shield",
+    "accent_color": "#f43f5e"
+  },
+  "event": {
+    "name": "Incident: Unknown Binary",
+    "date": "Ongoing — time-sensitive",
+    "duration": "Open",
+    "location": "Internal Lab Environment",
+    "organizer": "Security Operations",
+    "flag_format": "IOC{...}"
+  },
+  "hero": {
+    "headline": "Unknown Binary. Zero Signatures. Find the Threat.",
+    "description": "An unrecognized binary was recovered from an internal server. Code-signing checks, AV engines, and known-hash databases all returned clean. Threat intelligence suggests APT involvement. You are the analyst on call. Decompile it. Map the logic. Identify the vulnerability.",
+    "cta_text": "Access Lab Environment",
+    "cta_url": "#register",
+    "lab_cta_text": "View Mission Objectives",
+    "show_lab_link": true
+  },
+  "stats": [
+    { "label": "Binaries",    "value": "3",       "icon": "layers"  },
+    { "label": "Objectives",  "value": "5",       "icon": "book"    },
+    { "label": "Severity",    "value": "CRITICAL","icon": "shield"  },
+    { "label": "Time Limit",  "value": "6 hrs",   "icon": "clock"   }
+  ],
+  "categories": [
+    { "icon": "microscope", "name": "Triage",           "description": "Identify file format, architecture, compiler artifacts, and packer signatures before deeper analysis." },
+    { "icon": "puzzle",     "name": "Deobfuscation",    "description": "Strip packing layers, decode encrypted strings, and reconstruct the original code flow." },
+    { "icon": "layers",     "name": "Code Mapping",     "description": "Reconstruct function boundaries, call graphs, and data structures from raw disassembly." },
+    { "icon": "eye",        "name": "Behavioral Analysis", "description": "Run the binary in a controlled sandbox and trace API calls, file I/O, registry changes, and network activity." },
+    { "icon": "globe",      "name": "C2 Analysis",      "description": "Identify command-and-control channels, decode beaconing protocols, and extract remote endpoints." },
+    { "icon": "terminal",   "name": "Vuln Identification", "description": "Locate the specific code path — backdoor, exploit primitive, or logic flaw — that an attacker leverages." }
+  ],
+  "partners": [],
+  "schedule": [
+    { "time": "Phase 1", "event": "Triage and initial fingerprinting of recovered binary" },
+    { "time": "Phase 2", "event": "Static analysis — full code reconstruction" },
+    { "time": "Phase 3", "event": "Dynamic analysis — controlled sandbox execution" },
+    { "time": "Phase 4", "event": "Vulnerability identification and exploitation path mapping" },
+    { "time": "Phase 5", "event": "IOC extraction and incident report submission" }
+  ],
+  "faq": [
+    {
+      "q": "Why did standard detection fail?",
+      "a": "The binary uses a custom packer, stripped symbols, and no network signatures. It was compiled specifically to evade signature-based detection. Manual analysis is the only reliable path."
+    },
+    {
+      "q": "Is it safe to run the binary?",
+      "a": "Only inside the isolated lab VM with no network access. The binary has active network callbacks. Running it on a live system risks lateral movement."
+    },
+    {
+      "q": "What is the IOC flag format?",
+      "a": "Each objective reveals an Indicator of Compromise wrapped in IOC{...}. These are real artifacts extracted from the binary — C2 addresses, hardcoded keys, function hashes."
+    },
+    {
+      "q": "What tools are available in the lab?",
+      "a": "The lab VM includes Ghidra, Binary Ninja, x64dbg, Wireshark, Process Monitor, FLOSS, Cutter, and a Python 3 environment with pwntools and capstone."
+    }
+  ],
+  "lab": {
+    "title": "Mission Objectives",
+    "subtitle": "CLASSIFICATION: INTERNAL — Security Operations Use Only",
+    "description": "An unrecognized 64-bit PE binary (SHA-256: redacted) was recovered from C:\\ProgramData\\Microsoft\\svchost32.exe on a finance workstation. It has been present for an estimated 14 days. No AV vendor currently detects it. Work through each objective in order. Do not execute the binary outside the provided sandbox VM. Submit each IOC flag as you find it.",
+    "questions": [
+      {
+        "number": 1,
+        "title": "Triage & Fingerprinting",
+        "description": "Load the binary in a static analysis tool. Identify: (1) the target architecture and OS, (2) the compiler and approximate build date from PE header artifacts, (3) whether a packer or protector is present and which one. Submit the packer identification string as the flag.",
+        "points": 100,
+        "hint": "Run FLOSS and Detect-It-Easy against the binary before opening it in a disassembler. Check the PE section names and entropy values — high entropy sections indicate packing."
+      },
+      {
+        "number": 2,
+        "title": "Unpack & Reconstruct Entry Point",
+        "description": "The binary is packed. Attach a debugger, let the unpacking stub execute until it reaches the original entry point (OEP), then dump the unpacked image. Load the dump into Ghidra and auto-analyze. Identify the first meaningful function called after entry — not a CRT or loader stub. Submit its virtual address as the flag.",
+        "points": 200,
+        "hint": "Look for a jump to a region that was written at runtime. Set a hardware write breakpoint on the destination memory range, let it fire, then follow the final JMP to OEP."
+      },
+      {
+        "number": 3,
+        "title": "Persistence Mechanism",
+        "description": "The binary installs a persistence mechanism on first run. Using behavioral analysis (Process Monitor + sandbox trace), identify exactly how it achieves persistence: the registry key path, scheduled task name, or service entry it creates. Submit the persistence artifact name as the flag.",
+        "points": 250,
+        "hint": "Filter Process Monitor for RegSetValue and CreateFile operations during the first 10 seconds of execution inside the sandbox VM."
+      },
+      {
+        "number": 4,
+        "title": "C2 Communication Protocol",
+        "description": "The binary beacons to a remote server. The destination is not hardcoded as a plain string — it is derived algorithmically at runtime. Reverse the domain generation algorithm (DGA) or decode the encrypted endpoint. Submit the decoded C2 address as the flag.",
+        "points": 350,
+        "hint": "Look for base64 or XOR decoding routines near the networking calls (WSAConnect, InternetConnect, or WinHTTP functions). Emulate the decoding function in Python to recover the plaintext."
+      },
+      {
+        "number": 5,
+        "title": "Vulnerability — The Backdoor",
+        "description": "The binary contains a backdoor that allows the attacker to execute arbitrary commands on the host with SYSTEM privileges. Identify the exact vulnerability class (e.g., command injection, deserialization, memory corruption), the function name or offset where it occurs, and the trigger condition. Submit the function offset and vulnerability class as the flag.",
+        "points": 500,
+        "hint": ""
+      }
+    ],
+    "rules": {
+      "allowed": [
+        "Run the binary exclusively inside the provided isolated sandbox VM",
+        "Use any static or dynamic analysis tool available in the lab environment",
+        "Capture and analyze all network traffic generated inside the sandbox",
+        "Modify or patch the binary in memory during dynamic analysis",
+        "Use Python or scripting to automate decoding routines"
+      ],
+      "not_allowed": [
+        "Execute the binary on any machine connected to a live network",
+        "Copy the binary outside the lab environment",
+        "Share IOC flags or analysis findings with participants outside your team",
+        "Submit findings to public threat intelligence platforms during the exercise",
+        "Attempt to connect to the actual C2 server if identified — document only"
+      ]
+    }
+  },
+  "footer": {
+    "socials": [
+      { "label": "Discord",  "url": "https://discord.gg/secops"   },
+      { "label": "Twitter",  "url": "https://twitter.com/secops"  },
+      { "label": "GitHub",   "url": "https://github.com/secops"   }
+    ],
+    "email": "secops@company.internal",
+    "copyright": "Security Operations — Internal Use Only"
+  }
+}

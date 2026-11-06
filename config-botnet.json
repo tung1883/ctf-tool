@@ -1,0 +1,138 @@
+{
+  "site": {
+    "title": "BotnetCTF 2026 — Research & Defense",
+    "subtitle": "Understand botnets. Build better defenses.",
+    "logo_icon": "globe",
+    "accent_color": "#f97316"
+  },
+  "event": {
+    "name": "BotnetCTF 2026",
+    "date": "March 14–15, 2027",
+    "duration": "48 hours",
+    "location": "Isolated Lab Environment",
+    "organizer": "Security Club",
+    "flag_format": "BOT{...}"
+  },
+  "hero": {
+    "headline": "Build a Botnet. Understand the Threat. Defend Against It.",
+    "description": "This year's CTF theme focuses on botnet development, challenging participants to explore how botnets are designed, built, and operated in a controlled environment. By understanding the inner workings of botnets, their communication mechanisms, and attack strategies, participants will gain valuable insights into how these threats function in the real world. The ultimate goal is to bridge offensive and defensive security knowledge, equipping defenders with the skills and understanding needed to better detect, analyze, mitigate, and defend against botnet threats.",
+    "disclaimer": "FOR RESEARCH AND DEFENSIVE PURPOSES ONLY. All development and testing must remain strictly within the designated CTF lab environment. Any application of techniques, code, or knowledge from this competition outside the authorized environment is strictly prohibited and may constitute a criminal offense. By participating, you agree to these terms.",
+    "cta_text": "Register Now",
+    "cta_url": "#register",
+    "lab_cta_text": "View Lab Objectives",
+    "show_lab_link": true
+  },
+  "stats": [
+    { "label": "Challenges",  "value": "5",     "icon": "layers"  },
+    { "label": "Teams",       "value": "80+",   "icon": "users"   },
+    { "label": "Prize Pool",  "value": "$1,500","icon": "award"   },
+    { "label": "Hours",       "value": "48",    "icon": "clock"   }
+  ],
+  "categories": [
+    { "icon": "globe",      "name": "C2 Architecture",   "description": "Design and implement a command-and-control server: protocols, authentication, and tasking queues." },
+    { "icon": "terminal",   "name": "Bot Client",         "description": "Develop the agent that runs on compromised nodes: beaconing, command execution, and self-management." },
+    { "icon": "layers",     "name": "Propagation",        "description": "Simulate how bots spread using disclosed CVEs against intentionally vulnerable lab targets." },
+    { "icon": "eye",        "name": "Coordinated Ops",    "description": "Demonstrate botnet-driven coordinated actions such as DDoS simulation in the sandbox environment." },
+    { "icon": "shield",     "name": "Evasion Techniques", "description": "Understand how botnets evade detection: encrypted comms, domain fluxing, and traffic mimicry." },
+    { "icon": "microscope", "name": "Defensive Analysis", "description": "Analyze your own botnet from a defender's perspective: extract IOCs, write detection rules, and report." }
+  ],
+  "partners": [],
+  "schedule": [
+    { "time": "Mar 14 – 10:00 UTC", "event": "Competition opens — lab VMs and CVE targets provisioned" },
+    { "time": "Mar 14 – 12:00 UTC", "event": "Opening stream — architecture overview and rules briefing" },
+    { "time": "Mar 15 – 06:00 UTC", "event": "Submission deadline for botnet implementation" },
+    { "time": "Mar 15 – 08:00 UTC", "event": "Referee and defensive team evaluation begins" },
+    { "time": "Mar 15 – 12:00 UTC", "event": "Award ceremony — findings presented to defensive teams" }
+  ],
+  "faq": [
+    {
+      "q": "Is this legal?",
+      "a": "All activity takes place inside a fully isolated lab environment with no connection to the public internet. Participants operate exclusively on systems they are explicitly authorized to interact with. Applying any technique outside this environment is prohibited."
+    },
+    {
+      "q": "What is the purpose of building a botnet here?",
+      "a": "Understanding offensive techniques in depth is one of the most effective paths to building strong defenses. Defensive teams will analyze every submission to extract detection logic, IOCs, and behavioral signatures they can use in real-world environments."
+    },
+    {
+      "q": "What reference botnets can I study?",
+      "a": "Participants may study publicly documented botnets such as Mirai and Satori using published research papers, academic write-ups, and disclosed CVE analyses. Direct use of leaked source code is not permitted."
+    },
+    {
+      "q": "How are submissions judged?",
+      "a": "Referees and defensive teams evaluate each botnet on architecture quality, real-world fidelity, documentation, and the value of defensive insights it provides. Points are awarded for both offensive completeness and the quality of your own defensive write-up."
+    },
+    {
+      "q": "What happens to submitted code after the event?",
+      "a": "All code remains within the competition environment and is never distributed publicly. It is used solely for defensive research by the organizing team."
+    }
+  ],
+  "lab": {
+    "title": "Lab Objectives",
+    "subtitle": "Isolated lab environment — no external network access",
+    "description": "Participants are challenged to develop and deploy a botnet inspired by existing botnets such as Mirai or Satori. The botnet should demonstrate key characteristics of real-world botnet architectures, including command-and-control (C2) communication, device management, and coordinated operations. Participants may use publicly disclosed CVEs to demonstrate how vulnerable systems can be compromised within the designated CTF environment. The objective is to understand how botnets are constructed and operate, providing defensive teams with a realistic adversarial scenario to investigate and defend against. Once development is complete, the submitted botnet will be examined by the referees and defensive teams, who will evaluate its behavior, architecture, and security implications.",
+    "disclaimer": "AUTHORIZED ENVIRONMENT ONLY. All botnet code, C2 infrastructure, and exploitation techniques must operate exclusively within the provided lab subnet (192.168.100.0/24). Any attempt to reach external networks, real infrastructure, or systems outside the lab range will result in immediate disqualification and may be referred to law enforcement. This environment is monitored at all times.",
+    "questions": [
+      {
+        "number": 1,
+        "title": "C2 Server Implementation",
+        "description": "Design and implement a command-and-control server within the lab environment. It must support: (1) authenticated bot registration, (2) a tasking queue for distributing commands to connected bots, (3) status reporting from bots, and (4) an operator interface. Submit the C2 protocol specification as the flag.",
+        "points": 200,
+        "hint": "Start with a simple TCP or HTTP-based protocol. Document every message type clearly — the defensive team will need to build detectors from your spec."
+      },
+      {
+        "number": 2,
+        "title": "Bot Client — Beacon & Execute",
+        "description": "Develop the bot agent that runs on compromised lab nodes. It must: beacon to the C2 server on a configurable interval, receive and execute commands, report results back, and maintain persistence across reboots on the lab target. Submit the beacon interval and persistence mechanism as the flag.",
+        "points": 250,
+        "hint": "Keep the beacon protocol simple but document it thoroughly. Persistence options include cron jobs, systemd units, or rc.local — all valid within the lab."
+      },
+      {
+        "number": 3,
+        "title": "Propagation via Disclosed CVE",
+        "description": "Using a publicly disclosed CVE assigned to one of the intentionally vulnerable lab targets (see the lab CVE list), demonstrate how your bot could compromise a new host and add it to the botnet. The vulnerable targets are listed in /lab/targets.txt on the lab VM. Submit the CVE number and your exploitation approach as the flag.",
+        "points": 300,
+        "hint": "Review the CVSS score and published PoC for each listed CVE. Choose one with a network-accessible attack vector. Use Metasploit or a custom exploit — both are permitted on the lab targets."
+      },
+      {
+        "number": 4,
+        "title": "Coordinated Operation",
+        "description": "Using your C2 and at least 3 compromised lab nodes, demonstrate a coordinated operation: a synchronized DDoS simulation against the lab's designated target server (192.168.100.254). The target server measures and logs incoming request volume. Submit the peak requests-per-second achieved as the flag.",
+        "points": 300,
+        "hint": "Coordinate timing via your C2's tasking queue. HTTP flood is the simplest approach. The target server accepts connections on port 80 and logs all requests to /var/log/ddos-sim.log."
+      },
+      {
+        "number": 5,
+        "title": "Defensive Write-Up — IOCs & Detection Rules",
+        "description": "Analyze your own botnet from a defender's perspective and produce a defensive report covering: (1) a full list of IOCs (IPs, domains, file hashes, registry keys, process names), (2) at least 3 Sigma or Snort/Suricata detection rules targeting your botnet's behavior, and (3) recommended mitigations. The quality of this report is worth as many points as the technical challenges combined. Submit your report to the referee portal to receive the flag.",
+        "points": 500,
+        "hint": "Think like a SOC analyst who has never seen your botnet before. What would they see in firewall logs, process monitors, and network captures? Write rules that catch your own traffic."
+      }
+    ],
+    "rules": {
+      "allowed": [
+        "Develop and deploy botnet code exclusively within the lab subnet (192.168.100.0/24)",
+        "Use publicly disclosed CVEs to compromise designated, intentionally vulnerable lab targets",
+        "Reference published research papers and academic analyses of real botnets",
+        "Use any tool available on the lab VM (Metasploit, Scapy, nmap, etc.)",
+        "Collaborate with your registered team members within your team's isolated lab segment"
+      ],
+      "not_allowed": [
+        "Deploy any botnet code, C2, or exploit outside the lab environment — this includes your own machines",
+        "Target any host outside the designated lab subnet (192.168.100.0/24)",
+        "Use leaked or non-publicly-available botnet source code",
+        "Share code, exploits, or techniques with other teams during the competition",
+        "Attempt to reach the public internet from the lab environment",
+        "Distribute any competition code or tooling outside the authorized environment after the event"
+      ]
+    }
+  },
+  "footer": {
+    "socials": [
+      { "label": "Discord",  "url": "https://discord.gg/botnetctf"   },
+      { "label": "Twitter",  "url": "https://twitter.com/botnetctf"  },
+      { "label": "GitHub",   "url": "https://github.com/botnetctf"   }
+    ],
+    "email": "ctf@botnetctf.io",
+    "copyright": "BotnetCTF 2026 — Research & Defensive Security"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "site": {
+    "title": "ScrapeCTF 2026",
+    "subtitle": "Extract everything. Leave no data behind.",
+    "logo_icon": "globe",
+    "accent_color": "#38bdf8"
+  },
+  "event": {
+    "name": "ScrapeCTF 2026",
+    "date": "July 12–13, 2027",
+    "duration": "36 hours",
+    "location": "Online",
+    "organizer": "Security Club",
+    "flag_format": "SCRAPE{...}"
+  },
+  "hero": {
+    "headline": "The Data Is There. Go Get It.",
+    "description": "ScrapeCTF is a web data extraction competition covering the full scraping stack: HTTP client engineering, HTML/JSON parsing, JavaScript-rendered SPA scraping, anti-bot bypass, API reverse engineering, and large-scale data pipeline assembly. All targets are purpose-built challenge servers — no real websites, no ToS violations, no grey areas. If it's on the challenge server, you're authorized to scrape it.",
+    "cta_text": "Register Now",
+    "cta_url": "#register",
+    "lab_cta_text": "View Challenges",
+    "show_lab_link": true
+  },
+  "stats": [
+    { "label": "Challenges",  "value": "8",     "icon": "layers"  },
+    { "label": "Teams",       "value": "150+",  "icon": "users"   },
+    { "label": "Prize Pool",  "value": "$1,200","icon": "award"   },
+    { "label": "Hours",       "value": "36",    "icon": "clock"   }
+  ],
+  "categories": [
+    { "icon": "globe",      "name": "HTTP & Headers",         "description": "Session management, cookie handling, custom headers, redirect chains, and authentication flows." },
+    { "icon": "terminal",   "name": "HTML Parsing",           "description": "DOM traversal, XPath, CSS selectors, deeply nested structures, and malformed markup." },
+    { "icon": "eye",        "name": "JavaScript / SPA",       "description": "Scraping React, Vue, and Angular apps that render entirely in the browser — Playwright and Puppeteer territory." },
+    { "icon": "lock",       "name": "Anti-Bot Bypass",        "description": "Rate limiting, IP rotation, CAPTCHA challenges, Cloudflare-style fingerprinting, and behavioral detection." },
+    { "icon": "puzzle",     "name": "API Reverse Engineering","description": "Undocumented REST and GraphQL APIs: sniff traffic, decode obfuscated parameters, replay and automate requests." },
+    { "icon": "layers",     "name": "Data Pipeline",          "description": "Extract → clean → transform → store. Structured output from messy sources, deduplication, and schema inference." }
+  ],
+  "partners": [],
+  "schedule": [
+    { "time": "Jul 12 – 10:00 UTC", "event": "Competition opens — all challenge servers live" },
+    { "time": "Jul 12 – 12:00 UTC", "event": "Opening stream — tooling overview (httpx, Playwright, scrapy, parsel)" },
+    { "time": "Jul 12 – 20:00 UTC", "event": "First-blood announcements" },
+    { "time": "Jul 13 – 10:00 UTC", "event": "Final submissions close" },
+    { "time": "Jul 13 – 12:00 UTC", "event": "Award ceremony and writeup stream" }
+  ],
+  "faq": [
+    {
+      "q": "Are we scraping real websites?",
+      "a": "No. All targets are purpose-built challenge servers hosted for this event. You are explicitly authorized to scrape them by any means necessary. No real websites, no ToS issues, no legal grey areas."
+    },
+    {
+      "q": "What language should I use?",
+      "a": "Any language. Python (httpx, requests, scrapy, Playwright, Selenium, parsel, BeautifulSoup) is the most common, but Node.js (Puppeteer, Cheerio), Go, and Rust scrapers are all valid."
+    },
+    {
+      "q": "How are flags submitted?",
+      "a": "Each challenge defines a flag extraction objective — scrape a specific data point from the target server and submit it in SCRAPE{...} format. The flag value is embedded in the data you extract."
+    },
+    {
+      "q": "Are there browser automation challenges?",
+      "a": "Yes — two challenges require a real browser (Playwright or Puppeteer) because the targets render entirely in JavaScript. Headless browser automation is part of the skill set being tested."
+    },
+    {
+      "q": "Can I use proxy pools or IP rotation?",
+      "a": "Yes. For anti-bot bypass challenges, rotating proxies and user-agent spoofing are explicitly permitted and expected. The lab provides a small proxy list for teams without their own."
+    }
+  ],
+  "lab": {
+    "title": "Scraping Challenges",
+    "subtitle": "All targets are live on the challenge server — start scraping",
+    "description": "Eight challenges in increasing difficulty. Each challenge defines a target URL and the data you need to extract. Flags are embedded in the extracted data. Static targets stay up for the full 36 hours; dynamic targets (rate-limited, bot-protected) reset every 6 hours.",
+    "questions": [
+      {
+        "number": 1,
+        "title": "Static HTML — Product Catalog",
+        "description": "The target server hosts a paginated product catalog across 50 pages of static HTML. Scrape all product names, SKUs, and prices. The flag is the SHA-256 hash of all SKUs sorted alphabetically and joined with newlines. Pagination uses standard ?page=N query params.",
+        "points": 100,
+        "hint": "Use requests + BeautifulSoup or httpx + parsel. Find the pagination range from the first page's nav element. Pool your requests with asyncio or a thread pool for speed."
+      },
+      {
+        "number": 2,
+        "title": "Authentication & Session Cookies",
+        "description": "The target has a login wall. Credentials are posted in the challenge description. After login, scrape the user dashboard which contains a hidden data table not visible to logged-out visitors. The flag is in a table cell with class 'secret-value'.",
+        "points": 150,
+        "hint": "Use a requests.Session() to persist cookies across the login POST and subsequent GETs. Check the login form for CSRF tokens — they need to be submitted with the credentials."
+      },
+      {
+        "number": 3,
+        "title": "JavaScript-Rendered SPA",
+        "description": "The target is a React single-page application. The HTML returned by the server is an empty shell — all content is loaded via API calls after the JS executes. Scrape the full article list from the rendered DOM. The flag is embedded in the last article's body text.",
+        "points": 200,
+        "hint": "Use Playwright: `page.goto(url)` then `page.wait_for_selector('.article-list')` before extracting. Alternatively, open DevTools Network tab on the target manually to find the underlying API call and hit it directly."
+      },
+      {
+        "number": 4,
+        "title": "Undocumented REST API",
+        "description": "A mobile app's backend API is running on the challenge server. No documentation exists. Intercept the app's traffic (a web simulation is provided), reverse engineer the authentication scheme (HMAC-signed requests), and extract the full user list from the /api/users endpoint. The flag is the email address of user ID 1337.",
+        "points": 250,
+        "hint": "Open the web simulation in DevTools and watch the Network tab. Look for Authorization headers on API requests — they usually follow a pattern like HMAC-SHA256(timestamp + path + body, secret_key). Find the secret key in the JS source."
+      },
+      {
+        "number": 5,
+        "title": "Rate-Limited Endpoint",
+        "description": "The target endpoint returns one record per request and allows a maximum of 10 requests per minute per IP. You need to collect 500 records. Implement a compliant scraper that respects the rate limit and collects all records within the competition window. The flag is embedded in record #499.",
+        "points": 200,
+        "hint": "Use a token bucket or simple sleep-based rate limiter. 500 records at 10/min = 50 minutes — well within the window. Store results to disk as you go in case of crashes."
+      },
+      {
+        "number": 6,
+        "title": "Anti-Bot: Fingerprinting & Behavioral Detection",
+        "description": "The target runs a Cloudflare-style JS challenge and behavioral analysis — it blocks headless browsers detected by missing browser properties, unusual TLS fingerprints, or non-human interaction timing. Bypass the detection and scrape the protected data table. The flag is in the 7th row.",
+        "points": 350,
+        "hint": "Use Playwright with stealth patches (playwright-stealth or puppeteer-extra-plugin-stealth). Randomize mouse movements and scroll before clicking. Check if the TLS fingerprint (JA3) is being filtered — use a residential proxy if so."
+      },
+      {
+        "number": 7,
+        "title": "GraphQL Introspection & Data Extraction",
+        "description": "The target exposes a GraphQL API with introspection enabled. Enumerate the full schema, identify the query that returns flagged data, and extract it. The API uses cursor-based pagination — scrape all pages. The flag is in the notes field of the last node.",
+        "points": 300,
+        "hint": "Run a full introspection query first: `{ __schema { types { name fields { name } } } }`. Use a tool like GraphQL Voyager or Altair to visualize the schema. Then write a paginated query using the `after` cursor field."
+      },
+      {
+        "number": 8,
+        "title": "Full Pipeline — Scrape, Clean, Aggregate",
+        "description": "Three separate target servers each host one piece of a dataset: product catalog, inventory levels, and pricing history. Scrape all three, join them on a shared product_id field, clean the data (normalize dates, deduplicate entries, fill missing values), and compute the total inventory value across all products. Submit the total as the flag.",
+        "points": 400,
+        "hint": "Tackle each source separately first. Use pandas for the join and aggregation. Watch for inconsistent product_id formats between sources (some use int, some use zero-padded strings) — normalize before joining."
+      }
+    ],
+    "rules": {
+      "allowed": [
+        "Any HTTP client library, headless browser, or scraping framework",
+        "Proxy rotation, user-agent spoofing, and anti-bot bypass techniques on challenge targets",
+        "Automated scripts, concurrent requests, and pipeline tooling",
+        "Inspecting challenge server traffic with DevTools or a proxy (Burp, mitmproxy, Charles)",
+        "Collaborating with your registered team members"
+      ],
+      "not_allowed": [
+        "Scraping any server outside the designated challenge infrastructure",
+        "Attempting to attack or crash the challenge servers (DoS, SQL injection, etc.) — these are scraping challenges, not web security challenges",
+        "Sharing flags or working scrapers with other teams during the competition",
+        "Attempting to access other teams' submitted data or scraper code"
+      ]
+    }
+  },
+  "footer": {
+    "socials": [
+      { "label": "Discord", "url": "https://discord.gg/scrapectf"  },
+      { "label": "Twitter", "url": "https://twitter.com/scrapectf" },
+      { "label": "GitHub",  "url": "https://github.com/scrapectf"  }
+    ],
+    "email": "ctf@scrapectf.io",
+    "copyright": "ScrapeCTF 2026"
+  }
+}
