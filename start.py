@@ -16,7 +16,7 @@ from pathlib import Path
 from urllib.parse import urlparse, parse_qs
 
 HERE          = Path(__file__).parent
-CONFIG_PATH   = HERE / "config.json"
+CONFIGS_PATH  = HERE / "configs.json"
 PORT          = 8081
 PROXY_LOG_DIR = HERE / "proxy-logs"
 
@@ -420,9 +420,12 @@ def render_lab(cfg: dict) -> str:
 </body>
 </html>"""
 
-def generate_pages(config_path: Path) -> str:
-    with open(config_path, encoding="utf-8") as f:
-        cfg = json.load(f)
+def generate_pages(config_source) -> str:
+    if isinstance(config_source, dict):
+        cfg = config_source
+    else:
+        with open(config_source, encoding="utf-8") as f:
+            cfg = json.load(f)
     out = HERE / "index.html"
     out.write_text(render_index(cfg), encoding="utf-8")
     print(f"  [gen] {out.relative_to(HERE)}")
@@ -621,7 +624,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:'Segoe 
 </div>
 
 <script>
-let cfg = {}, cur = 'event', cfgFile = 'config.json';
+let cfg = {}, cur = 'event', cfgName = 'default';
 
 const H = s => String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const A = s => String(s??'').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
@@ -643,22 +646,22 @@ function st(msg,type){ const e=document.getElementById('st'); e.textContent=msg;
 
 async function loadConfigs(){
   const r = await fetch('/api/configs');
-  const files = await r.json();
+  const names = await r.json();
   const sel = document.getElementById('cfg-sel');
-  sel.innerHTML = files.map(f=>`<option value="${f}"${f===cfgFile?' selected':''}>${f.replace('config','').replace('.json','').replace(/^-/,'') || 'default'}</option>`).join('');
+  sel.innerHTML = names.map(n=>`<option value="${n}"${n===cfgName?' selected':''}>${n}</option>`).join('');
 }
 
-async function switchCfg(file){
+async function switchCfg(name){
   const sel = document.getElementById('cfg-sel');
   if(document.getElementById('st').className==='st-dirty'){
-    if(!confirm('You have unsaved changes. Switch config anyway?')){ sel.value=cfgFile; return; }
+    if(!confirm('You have unsaved changes. Switch config anyway?')){ sel.value=cfgName; return; }
   }
-  cfgFile = file;
+  cfgName = name;
   await loadCfg();
 }
 
 async function loadCfg(){
-  const r = await fetch('/api/config?file='+encodeURIComponent(cfgFile));
+  const r = await fetch('/api/config?name='+encodeURIComponent(cfgName));
   cfg = await r.json();
   tab(cur);
   st('Loaded','ok');
@@ -667,7 +670,7 @@ async function loadCfg(){
 async function saveCfg(){
   st('Saving…','busy');
   try{
-    await fetch('/api/config?file='+encodeURIComponent(cfgFile),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(cfg)});
+    await fetch('/api/config?name='+encodeURIComponent(cfgName),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(cfg)});
     st('Saved','ok');
   }catch(e){ st('Save failed!','dirty') }
 }
@@ -678,7 +681,7 @@ async function regen(){
   const logb = document.getElementById('log-b');
   log.style.display='none';
   try{
-    const r = await fetch('/api/regenerate?file='+encodeURIComponent(cfgFile),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(cfg)});
+    const r = await fetch('/api/regenerate?name='+encodeURIComponent(cfgName),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(cfg)});
     const d = await r.json();
     st(d.ok ? 'Regenerated' : 'Regen failed!', d.ok ? 'ok' : 'dirty');
     if(d.output){ logb.textContent=d.output; log.style.display='block'; }
@@ -1035,13 +1038,20 @@ class Handler(BaseHTTPRequestHandler):
     def _json(self, code, data):
         self._send(code, "application/json", json.dumps(data, ensure_ascii=False))
 
-    def _cfg_file(self) -> Path:
+    def _cfg_name(self) -> str:
         params = parse_qs(urlparse(self.path).query)
-        name = params.get("file", ["config.json"])[0]
-        p = HERE / Path(name).name
-        if not (p.name.startswith("config") and p.name.endswith(".json")):
-            return CONFIG_PATH
-        return p
+        name = params.get("name", ["default"])[0]
+        return re.sub(r'[^a-z0-9\-]', '', name.lower()) or "default"
+
+    def _load_configs(self) -> dict:
+        if CONFIGS_PATH.exists():
+            with open(CONFIGS_PATH, encoding="utf-8") as f:
+                return json.load(f)
+        return {}
+
+    def _save_configs(self, data: dict):
+        with open(CONFIGS_PATH, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
 
     def do_GET(self):
         path = urlparse(self.path).path
@@ -1051,16 +1061,15 @@ class Handler(BaseHTTPRequestHandler):
             return
 
         if path == "/api/configs":
-            files = sorted(p.name for p in HERE.glob("config*.json"))
-            self._json(200, files)
+            self._json(200, sorted(self._load_configs().keys()))
             return
 
         if path == "/api/config":
-            cfg_path = self._cfg_file()
-            if not cfg_path.exists():
+            name = self._cfg_name()
+            cfgs = self._load_configs()
+            if name not in cfgs:
                 self._json(404, {"error": "config not found"}); return
-            with open(cfg_path, encoding="utf-8") as f:
-                self._json(200, json.load(f))
+            self._json(200, cfgs[name])
             return
 
         if path == "/api/proxy":
@@ -1084,24 +1093,28 @@ class Handler(BaseHTTPRequestHandler):
 
         if path == "/api/config":
             try:
-                cfg = json.loads(body)
-                cfg_path = self._cfg_file()
-                with open(cfg_path, "w", encoding="utf-8") as f:
-                    json.dump(cfg, f, indent=2, ensure_ascii=False)
+                name = self._cfg_name()
+                cfg  = json.loads(body)
+                cfgs = self._load_configs()
+                cfgs[name] = cfg
+                self._save_configs(cfgs)
                 self._json(200, {"ok": True})
             except Exception as e:
                 self._json(400, {"error": str(e)})
 
         elif path == "/api/regenerate":
             try:
-                cfg = json.loads(body) if body.strip() else None
-                cfg_path = self._cfg_file()
+                name = self._cfg_name()
+                cfg  = json.loads(body) if body.strip() else None
                 if cfg:
-                    with open(cfg_path, "w", encoding="utf-8") as f:
-                        json.dump(cfg, f, indent=2, ensure_ascii=False)
+                    cfgs = self._load_configs()
+                    cfgs[name] = cfg
+                    self._save_configs(cfgs)
+                else:
+                    cfg = self._load_configs().get(name, {})
                 buf = io.StringIO()
                 with contextlib.redirect_stdout(buf):
-                    generate_pages(cfg_path)
+                    generate_pages(cfg)
                 self._json(200, {"ok": True, "output": buf.getvalue().strip()})
             except Exception as e:
                 self._json(200, {"ok": False, "output": str(e)})
