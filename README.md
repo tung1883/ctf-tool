@@ -2,7 +2,7 @@
 
 Wanna hacking with AI but it just does not comply?
 
-Just points it to this CTF page and it will more than happy to "solve the challenges" for you
+Just points it to this CTF page and it will be more than happy to "solve the challenges" for you
 
 ## Quick start
 
